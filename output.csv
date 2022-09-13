@@ -1,22 +1,22 @@
-IP,Country Name,State,Browser,Device,Method,Status Code
-207.114.153.6,United States,California,Chrome,Desktop,POST,200
-74.143.105.130,United States,Indiana,Chrome,Desktop,GET,200
-109.239.235.216,Norway,Not Found,IE,Desktop,GET,200
-70.194.134.125,United States,Not Found,Chrome,Desktop,GET,200
-74.143.105.130,United States,Indiana,Mobile Safari,Tablet,POST,204
-68.180.228.166,United States,Not Found,IE,Desktop,POST,204
-71.219.249.45,United States,Not Found,Yahoo! Slurp,Robot,GET,200
-209.190.6.124,United States,Ohio,Other,,GET,304
-65.55.208.31,United States,Illinois,Safari,Desktop,GET,301
-207.114.153.6,United States,California,msnbot,Robot,GET,301
-123.126.113.132,China,Beijing,Chrome,Desktop,GET,200
-98.217.63.220,United States,Massachusetts,Sogou web spider,Robot,GET,200
-142.105.164.127,United States,New York,Chrome,Desktop,GET,301
-98.217.63.220,United States,Massachusetts,Mobile Safari,Tablet,POST,200
-98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,302
-65.244.43.194,United States,Massachusetts,Chrome,Desktop,GET,200
-96.38.122.15,United States,Tennessee,IE,Desktop,POST,200
-98.198.157.9,United States,Texas,Google,Mobile,POST,200
-24.136.125.201,United States,New York,Chrome,Desktop,GET,200
-65.55.219.100,United States,Washington,Mobile Safari,Tablet,GET,200
-98.198.157.9,United States,Texas,msnbot,Robot,GET,301
+IP,Country Name,State,Browser,Device,Method,Status Code,Date and Time,URL
+207.114.153.6,United States,California,Chrome,Desktop,POST,200,10/Jun/2015:18:28:28,http://www.gobankingrates.com/personal-finance/?keyword=money.cnn.com
+74.143.105.130,United States,Indiana,Chrome,Desktop,GET,200,10/Jun/2015:18:14:56,http://www.gobankingrates.com/banking/find-cds-now/
+109.239.235.216,Norway,Not Found,IE,Desktop,GET,200,10/Jun/2015:18:15:00,http://www.gobankingrates.com/personal-finance/become-millionaire-using-just-401k/
+70.194.134.125,United States,Not Found,Chrome,Desktop,GET,200,10/Jun/2015:18:15:02,Empty URL
+74.143.105.130,United States,Indiana,Mobile Safari,Tablet,POST,204,10/Jun/2015:18:15:02,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+68.180.228.166,United States,Not Found,IE,Desktop,POST,204,10/Jun/2015:18:15:03,http://www.gobankingrates.com/personal-finance/first-thing-should-social-security-check/
+71.219.249.45,United States,Not Found,Yahoo! Slurp,Robot,GET,200,10/Jun/2015:18:28:16,Empty URL
+209.190.6.124,United States,Ohio,Other,,GET,304,10/Jun/2015:18:28:22,Empty URL
+65.55.208.31,United States,Illinois,Safari,Desktop,GET,301,10/Jun/2015:18:28:22,Empty URL
+207.114.153.6,United States,California,msnbot,Robot,GET,301,10/Jun/2015:18:28:22,Empty URL
+123.126.113.132,China,Beijing,Chrome,Desktop,GET,200,10/Jun/2015:18:28:22,http://www.gobankingrates.com/find-best-personal-loan-source02/
+98.217.63.220,United States,Massachusetts,Sogou web spider,Robot,GET,200,10/Jun/2015:18:28:23,Empty URL
+142.105.164.127,United States,New York,Chrome,Desktop,GET,301,10/Jun/2015:18:28:23,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+98.217.63.220,United States,Massachusetts,Mobile Safari,Tablet,POST,200,10/Jun/2015:18:28:23,http://www.gobankingrates.com/personal-finance/cnbcaes-sharon-epperson-nominated-gobankingratesaeaeoebest-personal-finance-expertaecompetition/
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,302,10/Jun/2015:18:28:25,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+65.244.43.194,United States,Massachusetts,Chrome,Desktop,GET,200,10/Jun/2015:18:28:26,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+96.38.122.15,United States,Tennessee,IE,Desktop,POST,200,10/Jun/2015:18:28:26,http://www.gobankingrates.com/savings-account/average-american-profile-earnings-spending-saving-money-today/
+98.198.157.9,United States,Texas,Google,Mobile,POST,200,10/Jun/2015:18:28:27,http://www.gobankingrates.com/banking/6-credit-unions-support-entertainment-industry/
+24.136.125.201,United States,New York,Chrome,Desktop,GET,200,10/Jun/2015:18:28:27,http://www.gobankingrates.com/personal-finance/?keyword=money.cnn.com
+65.55.219.100,United States,Washington,Mobile Safari,Tablet,GET,200,10/Jun/2015:18:28:28,http://trc.taboola.com/businessinsider/log/3/click?pi=%2Fnew-york-prison-break-details-2015-6&ri=f58ddadfbac3325eb0dec2e1eff6d7f0&sd=v2_8a862cd9a41e72a82c569270c5fe86cf_ecf50fb9-3304-4ec3-b146-7d32b4d93693_1433954024_1433954024_CGAQjgY&ui=ecf50fb9-3304-4ec3-b146-7d32b4d93693&it=video&ii=~~V1~~3117653910353787614~~43rNBxR1v-k0yiygd69ER2d4lk-tgVb5aPbxq8opU8WuO7R8hteHXNTYjxFvYN-f7YqT_oa54LmNfkA_2wUFPA&pt=text&li=rbox-t2v&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fstrategy-saving-million-source04%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dbusinessinsider&vi=1433954148973&p=consumertrack-sc&r=5
+98.198.157.9,United States,Texas,msnbot,Robot,GET,301,10/Jun/2015:18:28:28,Empty URL

@@ -1,11 +1,4 @@
-# fmt: off
-
-# 1. open log file, read content, and find the following:
-# -- ip addresses
-# -- useragent
-# 2. find country and state using the ip addresses
-# 3. translate the useragent to device type (mobile, tablet, desktop) and browser (safari, chrome, etc)
-# 4. combine new geo field (country/state) and device field with existing fields on access log file and output/export as a CSV
+# fmt: on
 
 from user_agents import parse
 from collections import defaultdict
@@ -61,7 +54,7 @@ def get_useragent_info(ua_str):
 
     user_agent = parse(ua_str)
     browser = user_agent.browser.family
-    os = '{}'.format(user_agent.os.family)
+    os = "{}".format(user_agent.os.family)
 
     device_type = ""
 
@@ -74,10 +67,9 @@ def get_useragent_info(ua_str):
     if user_agent.is_bot:
         device_type = "Robot"
 
-    device_type = '{}'.format(device_type)
+    device_type = "{}".format(device_type)
 
     return browser, device_type, os
-
 
 
 def get_ips(filename):
@@ -100,6 +92,15 @@ def get_ips(filename):
 
 
 def convert_user_agent_to_list(filename):
+    """Read the log file and extract user agent info, specifically device and browser with the help of helper functions
+
+    Args:
+        filename (file): the name of the file that contains the log
+
+    Returns:
+        list: A list of strings
+    """
+
     user_agent_info = []
     with open(filename) as f:
         lines = f.readlines()
@@ -113,16 +114,33 @@ def convert_user_agent_to_list(filename):
 
 
 def get_method_header(filename):
+    """Read the log file and extract the method (get/post)
+
+    Args:
+        filename (file): the name of the file that contains the log
+
+    Returns:
+        list: A list of strings
+    """
+
     method_list = []
     with open(filename) as f:
         lines = f.readlines()
         for line in lines:
-            method = line.split()[5][1:] # slice [1:] to remove the " at the front
+            method = line.split()[5][1:]  # slice [1:] to remove the " at the front
             method_list.append(method)
     return method_list
 
 
 def get_api_status(filename):
+    """Read the log file and extract the api status code (200, 204, etc)
+
+    Args:
+        filename (file): the name of the file that contains the log
+
+    Returns:
+        list: A list of strings
+    """
     api_status_list = []
     with open(filename) as f:
         lines = f.readlines()
@@ -133,17 +151,55 @@ def get_api_status(filename):
 
 
 def get_date_and_time(filename):
-    pass
+    """Read the log file and extract the date and time
+
+    Args:
+        filename (file): the name of the file that contains the log
+
+    Returns:
+        list: A list of strings
+    """
+
+    date_and_time_list = []
+    with open(filename) as f:
+        lines = f.readlines()
+        for line in lines:
+            date_and_time = line.split()[3][
+                1:
+            ]  # slice [1:] to remove the [ at the front
+            date_and_time_list.append(date_and_time)
+    return date_and_time_list
+
 
 def get_url(filename):
-    pass
+    """Read the log file and extract the url
 
+    Args:
+        filename (file): the name of the file that contains the log
+
+    Returns:
+        list: A list of strings
+    """
+
+    url_list = []
+    with open(filename) as f:
+        lines = f.readlines()
+        for line in lines:
+            url = line.split()[10][
+                1:-1
+            ]  # slice [1:-1] to remove quotes from start and end
+            if url == "-":
+                url_list.append("Empty URL")
+            else:
+                url_list.append(url)
+    return url_list
 
 
 def find_user_info(ips_list, filename):
     """Takes in a list of IP addresses and a file (expects a log file).
     It then iterates through the list of IP addresses and uses the user_agent_info list to find the device and browser used.
     Then it uses the ips_list list to find the country name and state of the IP address.
+    Uses helper functions to add data to the final dictionary output.
 
     Args:
         ips_list (list): the list of IP addresses we want to track
@@ -157,6 +213,8 @@ def find_user_info(ips_list, filename):
     user_agent_info = convert_user_agent_to_list(filename)
     method_info = get_method_header(filename)
     api_status_info = get_api_status(filename)
+    get_date_and_time_info = get_date_and_time(filename)
+    get_url_info = get_url(filename)
 
     output = defaultdict(list)
     temp_list = []
@@ -169,11 +227,21 @@ def find_user_info(ips_list, filename):
         if state == None:
             state = "Not Found"
 
-        temp_list.append( (ip, country_name, state, user_agent_info[index - 1], method_info[index - 1], api_status_info[index - 1]) )
+        temp_list.append(
+            (
+                ip,
+                country_name,
+                state,
+                user_agent_info[index - 1],
+                method_info[index - 1],
+                api_status_info[index - 1],
+                get_date_and_time_info[index - 1],
+                get_url_info[index - 1],
+            )
+        )
 
     for index, info in enumerate(temp_list):
         output[index].append(info)
-
 
     return output
 
@@ -185,13 +253,22 @@ def export_to_csv(dict):
         dict (dictionary): the dictionary to be exported to csv
     """
 
-    with open('output.csv', 'w') as csvfile:
+    with open("output.csv", "w") as csvfile:
         writer = csv.writer(csvfile)
 
-        headers = ["IP", "Country Name", "State", "Browser", "Device", "Method", "Status Code"]
+        headers = [
+            "IP",
+            "Country Name",
+            "State",
+            "Browser",
+            "Device",
+            "Method",
+            "Status Code",
+            "Date and Time",
+            "URL",
+        ]
 
         writer.writerow(headers)
-
 
         for item in dict.items():
             ip = item[1][0][0]
@@ -201,9 +278,22 @@ def export_to_csv(dict):
             user_agent_device = item[1][0][3][1]
             method = item[1][0][4]
             status_code = item[1][0][5]
+            date_and_time = item[1][0][6]
+            url = item[1][0][7]
 
-
-            writer.writerow( (ip, country_name, state, user_agent_browser, user_agent_device, method, status_code) )
+            writer.writerow(
+                (
+                    ip,
+                    country_name,
+                    state,
+                    user_agent_browser,
+                    user_agent_device,
+                    method,
+                    status_code,
+                    date_and_time,
+                    url,
+                )
+            )
 
 
 # runs file
