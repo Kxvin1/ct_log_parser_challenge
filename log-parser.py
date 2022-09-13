@@ -99,6 +99,47 @@ def get_ips(filename):
         return ip_address_list
 
 
+def convert_user_agent_to_list(filename):
+    user_agent_info = []
+    with open(filename) as f:
+        lines = f.readlines()
+        for line in lines:
+            s = line
+            result = extract_useragent(s)
+            ua_string = result[8]
+            user_agent = get_useragent_info(ua_string)
+            user_agent_info.append(user_agent)
+    return user_agent_info
+
+
+def get_method_header(filename):
+    method_list = []
+    with open(filename) as f:
+        lines = f.readlines()
+        for line in lines:
+            method = line.split()[5][1:] # slice [1:] to remove the " at the front
+            method_list.append(method)
+    return method_list
+
+
+def get_api_status(filename):
+    api_status_list = []
+    with open(filename) as f:
+        lines = f.readlines()
+        for line in lines:
+            api_status_code = line.split()[8]
+            api_status_list.append(api_status_code)
+    return api_status_list
+
+
+def get_date_and_time(filename):
+    pass
+
+def get_url(filename):
+    pass
+
+
+
 def find_user_info(ips_list, filename):
     """Takes in a list of IP addresses and a file (expects a log file).
     It then iterates through the list of IP addresses and uses the user_agent_info list to find the device and browser used.
@@ -113,15 +154,9 @@ def find_user_info(ips_list, filename):
         The value is a list of tuples. Each tuple contains the IP address, country name, state, and user agent info (device and browser)
     """
 
-    user_agent_info = []
-    with open(filename) as f:
-        lines = f.readlines()
-        for line in lines:
-            s = line
-            result = extract_useragent(s)
-            ua_string = result[8]
-            user_agent = get_useragent_info(ua_string)
-            user_agent_info.append(user_agent)
+    user_agent_info = convert_user_agent_to_list(filename)
+    method_info = get_method_header(filename)
+    api_status_info = get_api_status(filename)
 
     output = defaultdict(list)
     temp_list = []
@@ -134,7 +169,7 @@ def find_user_info(ips_list, filename):
         if state == None:
             state = "Not Found"
 
-        temp_list.append( (ip, country_name, state, user_agent_info[index - 1]) )
+        temp_list.append( (ip, country_name, state, user_agent_info[index - 1], method_info[index - 1], api_status_info[index - 1]) )
 
     for index, info in enumerate(temp_list):
         output[index].append(info)
@@ -153,7 +188,7 @@ def export_to_csv(dict):
     with open('output.csv', 'w') as csvfile:
         writer = csv.writer(csvfile)
 
-        headers = ["IP", "Country Name", "State", "Browser", "Device"]
+        headers = ["IP", "Country Name", "State", "Browser", "Device", "Method", "Status Code"]
 
         writer.writerow(headers)
 
@@ -164,9 +199,11 @@ def export_to_csv(dict):
             state = item[1][0][2]
             user_agent_browser = item[1][0][3][0]
             user_agent_device = item[1][0][3][1]
+            method = item[1][0][4]
+            status_code = item[1][0][5]
 
 
-            writer.writerow( (ip, country_name, state, user_agent_browser, user_agent_device) )
+            writer.writerow( (ip, country_name, state, user_agent_browser, user_agent_device, method, status_code) )
 
 
 # runs file
