@@ -1,5 +1,7 @@
 import re
 
+from .confirm_file_type import confirm_file_type as cft
+
 
 def get_ips(filename):
     """Read the log file and extract all the IP addresses
@@ -10,6 +12,7 @@ def get_ips(filename):
     Returns:
         list: A list of strings containing IP addresses
     """
+    cft(filename)
 
     with open(filename) as f:
         log = f.read()

@@ -8,6 +8,8 @@ from log_parser.other_headers import (
     get_url,
 )
 from log_parser.get_ips import get_ips
+from log_parser.confirm_file_type import confirm_file_type as cft
+
 
 import requests
 import csv
@@ -27,6 +29,8 @@ def find_user_info(ips_list, filename):
         dictionary: A dictionary with the key being the index of the IP address in the list of IP addresses.
         The value is a list of tuples. Each tuple contains the IP address, country name, state, and user agent info (device and browser)
     """
+
+    cft(filename)
 
     user_agent_info = convert_user_agent_to_list(filename)
     method_info = get_method_header(filename)

@@ -1,5 +1,7 @@
 from user_agents import parse
 
+from .confirm_file_type import confirm_file_type as cft
+
 
 def extract_useragent(s):
     """Parses the user agent string into a list of strings
@@ -74,6 +76,7 @@ def convert_user_agent_to_list(filename):
     Returns:
         list: A list of strings containing the user agent info
     """
+    cft(filename)
 
     user_agent_info = []
 
