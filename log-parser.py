@@ -1,5 +1,3 @@
-# fmt: on
-
 from user_agents import parse
 from collections import defaultdict
 
@@ -43,7 +41,7 @@ def extract_useragent(s):
 
 
 def get_useragent_info(ua_str):
-    """The get_useragent_info function takes a user agent string and returns a tuple of browser, device type, and operating system
+    """The get_useragent_info function takes a user agent (ua) string and returns a tuple of browser, device type, and operating system
 
     Args:
         ua_str (str): The user agent string to parse
@@ -79,7 +77,7 @@ def get_ips(filename):
         filename (file): the name of the file that contains the log
 
     Returns:
-        list: A list of strings
+        list: A list of strings containing IP addresses
     """
 
     with open(filename) as f:
@@ -92,13 +90,13 @@ def get_ips(filename):
 
 
 def convert_user_agent_to_list(filename):
-    """Read the log file and extract user agent info, specifically device and browser with the help of helper functions
+    """Read the log file and extracts all user agent info, specifically device and browser
 
     Args:
         filename (file): the name of the file that contains the log
 
     Returns:
-        list: A list of strings
+        list: A list of strings containing the user agent info
     """
 
     user_agent_info = []
@@ -114,13 +112,13 @@ def convert_user_agent_to_list(filename):
 
 
 def get_method_header(filename):
-    """Read the log file and extract the method (get/post)
+    """Read the log file and extract all the methods (get/post)
 
     Args:
         filename (file): the name of the file that contains the log
 
     Returns:
-        list: A list of strings
+        list: A list of strings containing methods
     """
 
     method_list = []
@@ -133,13 +131,13 @@ def get_method_header(filename):
 
 
 def get_api_status(filename):
-    """Read the log file and extract the api status code (200, 204, etc)
+    """Read the log file and extract all the api status codes (200, 204, etc)
 
     Args:
         filename (file): the name of the file that contains the log
 
     Returns:
-        list: A list of strings
+        list: A list of strings containing the status codes
     """
     api_status_list = []
     with open(filename) as f:
@@ -151,13 +149,13 @@ def get_api_status(filename):
 
 
 def get_date_and_time(filename):
-    """Read the log file and extract the date and time
+    """Read the log file and extract all the dates and times
 
     Args:
         filename (file): the name of the file that contains the log
 
     Returns:
-        list: A list of strings
+        list: A list of strings containing the dates and times
     """
 
     date_and_time_list = []
@@ -172,13 +170,13 @@ def get_date_and_time(filename):
 
 
 def get_url(filename):
-    """Read the log file and extract the url
+    """Read the log file and extracts all the urls
 
     Args:
         filename (file): the name of the file that contains the log
 
     Returns:
-        list: A list of strings
+        list: A list of strings containing the urls
     """
 
     url_list = []
