@@ -1,6 +1,22 @@
-IP,Country Name,State
-207.114.153.6,United States,California
-74.143.105.130,United States,Indiana
-109.239.235.216,Norway,Not Found
-70.194.134.125,United States,Not Found
-74.143.105.130,United States,Indiana
+IP,Country Name,State,Browser,Device
+207.114.153.6,United States,California,Chrome,Desktop
+74.143.105.130,United States,Indiana,Chrome,Desktop
+109.239.235.216,Norway,Not Found,IE,Desktop
+70.194.134.125,United States,Not Found,Chrome,Desktop
+74.143.105.130,United States,Indiana,Mobile Safari,Tablet
+68.180.228.166,United States,Not Found,IE,Desktop
+71.219.249.45,United States,Not Found,Yahoo! Slurp,Robot
+209.190.6.124,United States,Ohio,Other,
+65.55.208.31,United States,Illinois,Safari,Desktop
+207.114.153.6,United States,California,msnbot,Robot
+123.126.113.132,China,Beijing,Chrome,Desktop
+98.217.63.220,United States,Massachusetts,Sogou web spider,Robot
+142.105.164.127,United States,New York,Chrome,Desktop
+98.217.63.220,United States,Massachusetts,Mobile Safari,Tablet
+98.217.63.220,United States,Massachusetts,Chrome,Desktop
+65.244.43.194,United States,Massachusetts,Chrome,Desktop
+96.38.122.15,United States,Tennessee,IE,Desktop
+98.198.157.9,United States,Texas,Google,Mobile
+24.136.125.201,United States,New York,Chrome,Desktop
+65.55.219.100,United States,Washington,Mobile Safari,Tablet
+98.198.157.9,United States,Texas,msnbot,Robot
