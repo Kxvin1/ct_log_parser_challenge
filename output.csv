@@ -1,22 +1,251 @@
 IP,Country Name,State,Browser,Device,Method,Status Code,Date and Time,URL
-207.114.153.6,United States,California,Chrome,Desktop,POST,200,10/Jun/2015:18:28:28,http://www.gobankingrates.com/personal-finance/?keyword=money.cnn.com
+207.114.153.6,United States,California,IE,Desktop,GET,200,10/Jun/2015:18:16:15,http://www.gobankingrates.com/newsletters/
 74.143.105.130,United States,Indiana,Chrome,Desktop,GET,200,10/Jun/2015:18:14:56,http://www.gobankingrates.com/banking/find-cds-now/
 109.239.235.216,Norway,Not Found,IE,Desktop,GET,200,10/Jun/2015:18:15:00,http://www.gobankingrates.com/personal-finance/become-millionaire-using-just-401k/
 70.194.134.125,United States,Not Found,Chrome,Desktop,GET,200,10/Jun/2015:18:15:02,Empty URL
 74.143.105.130,United States,Indiana,Mobile Safari,Tablet,POST,204,10/Jun/2015:18:15:02,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
-68.180.228.166,United States,Not Found,IE,Desktop,POST,204,10/Jun/2015:18:15:03,http://www.gobankingrates.com/personal-finance/first-thing-should-social-security-check/
-71.219.249.45,United States,Not Found,Yahoo! Slurp,Robot,GET,200,10/Jun/2015:18:28:16,Empty URL
-209.190.6.124,United States,Ohio,Other,,GET,304,10/Jun/2015:18:28:22,Empty URL
-65.55.208.31,United States,Illinois,Safari,Desktop,GET,301,10/Jun/2015:18:28:22,Empty URL
-207.114.153.6,United States,California,msnbot,Robot,GET,301,10/Jun/2015:18:28:22,Empty URL
-123.126.113.132,China,Beijing,Chrome,Desktop,GET,200,10/Jun/2015:18:28:22,http://www.gobankingrates.com/find-best-personal-loan-source02/
-98.217.63.220,United States,Massachusetts,Sogou web spider,Robot,GET,200,10/Jun/2015:18:28:23,Empty URL
-142.105.164.127,United States,New York,Chrome,Desktop,GET,301,10/Jun/2015:18:28:23,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
-98.217.63.220,United States,Massachusetts,Mobile Safari,Tablet,POST,200,10/Jun/2015:18:28:23,http://www.gobankingrates.com/personal-finance/cnbcaes-sharon-epperson-nominated-gobankingratesaeaeoebest-personal-finance-expertaecompetition/
-98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,302,10/Jun/2015:18:28:25,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
-65.244.43.194,United States,Massachusetts,Chrome,Desktop,GET,200,10/Jun/2015:18:28:26,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
-96.38.122.15,United States,Tennessee,IE,Desktop,POST,200,10/Jun/2015:18:28:26,http://www.gobankingrates.com/savings-account/average-american-profile-earnings-spending-saving-money-today/
-98.198.157.9,United States,Texas,Google,Mobile,POST,200,10/Jun/2015:18:28:27,http://www.gobankingrates.com/banking/6-credit-unions-support-entertainment-industry/
-24.136.125.201,United States,New York,Chrome,Desktop,GET,200,10/Jun/2015:18:28:27,http://www.gobankingrates.com/personal-finance/?keyword=money.cnn.com
-65.55.219.100,United States,Washington,Mobile Safari,Tablet,GET,200,10/Jun/2015:18:28:28,http://trc.taboola.com/businessinsider/log/3/click?pi=%2Fnew-york-prison-break-details-2015-6&ri=f58ddadfbac3325eb0dec2e1eff6d7f0&sd=v2_8a862cd9a41e72a82c569270c5fe86cf_ecf50fb9-3304-4ec3-b146-7d32b4d93693_1433954024_1433954024_CGAQjgY&ui=ecf50fb9-3304-4ec3-b146-7d32b4d93693&it=video&ii=~~V1~~3117653910353787614~~43rNBxR1v-k0yiygd69ER2d4lk-tgVb5aPbxq8opU8WuO7R8hteHXNTYjxFvYN-f7YqT_oa54LmNfkA_2wUFPA&pt=text&li=rbox-t2v&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fstrategy-saving-million-source04%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dbusinessinsider&vi=1433954148973&p=consumertrack-sc&r=5
-98.198.157.9,United States,Texas,msnbot,Robot,GET,301,10/Jun/2015:18:28:28,Empty URL
+74.143.105.130,United States,Indiana,IE,Desktop,POST,204,10/Jun/2015:18:15:03,http://www.gobankingrates.com/personal-finance/first-thing-should-social-security-check/
+123.126.113.132,China,Beijing,IE,Desktop,GET,200,10/Jun/2015:18:15:06,http://www.gobankingrates.com/personal-finance/first-thing-should-social-security-check/
+50.242.138.189,United States,Colorado,Sogou web spider,Robot,GET,301,10/Jun/2015:18:15:06,Empty URL
+209.152.130.168,United States,Missouri,Chrome,Desktop,GET,301,10/Jun/2015:18:15:06,https://www.google.com/
+98.217.63.220,United States,Massachusetts,Firefox,Desktop,POST,204,10/Jun/2015:18:15:06,http://www.gobankingrates.com/personal-finance/personal-finance-retirement-planning/
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,302,10/Jun/2015:18:15:07,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+173.17.62.175,United States,Iowa,Chrome,Desktop,GET,301,10/Jun/2015:18:15:07,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+207.114.153.6,United States,California,IE,Desktop,GET,301,10/Jun/2015:18:15:08,http://www.gobankingrates.com/banking/top-iowa-banks-credit-unions/
+207.114.153.6,United States,California,Chrome,Desktop,GET,404,10/Jun/2015:18:15:08,http://www.gobankingrates.com/banking/find-cds-now/
+50.139.219.129,United States,Not Found,Chrome,Desktop,GET,404,10/Jun/2015:18:15:08,http://www.gobankingrates.com/banking/find-cds-now/
+207.114.153.6,United States,California,Chrome Mobile WebView,Mobile,GET,200,10/Jun/2015:18:15:08,http://wisersaver.com/blog/paycheck-to-paycheck/?source=np&utm_source=taboola
+24.236.207.115,United States,Michigan,Chrome,Desktop,GET,200,10/Jun/2015:18:15:08,http://www.gobankingrates.com/find-checking-accounts/
+74.143.105.130,United States,Indiana,Firefox,Desktop,POST,200,10/Jun/2015:18:15:09,http://www.gobankingrates.com/banking/5-bank-services-obsolete-10-years/?utm_source=taboola&utm_medium=cpc&utm_content=latimes
+68.180.228.166,United States,Not Found,IE,Desktop,POST,200,10/Jun/2015:18:15:09,http://www.gobankingrates.com/personal-finance/first-thing-should-social-security-check/
+100.43.85.5,United States,Not Found,Yahoo! Slurp,Robot,GET,200,10/Jun/2015:18:15:09,Empty URL
+207.114.153.6,United States,California,YandexBot,Robot,GET,301,10/Jun/2015:18:15:10,Empty URL
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,POST,200,10/Jun/2015:18:15:10,http://www.gobankingrates.com/find-checking-accounts/
+68.180.228.166,United States,Not Found,Chrome,Desktop,GET,302,10/Jun/2015:18:15:10,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+66.249.79.249,United States,Not Found,Yahoo! Slurp,Robot,GET,200,10/Jun/2015:18:15:10,Empty URL
+207.114.153.6,United States,California,Googlebot,Robot,GET,200,10/Jun/2015:18:15:11,Empty URL
+199.30.27.2,United States,Washington,Chrome,Desktop,GET,200,10/Jun/2015:18:15:11,Empty URL
+199.30.27.2,United States,Washington,msnbot,Robot,GET,301,10/Jun/2015:18:15:11,Empty URL
+199.30.27.2,United States,Washington,msnbot,Robot,GET,301,10/Jun/2015:18:15:12,Empty URL
+173.17.62.175,United States,Iowa,msnbot,Robot,GET,200,10/Jun/2015:18:15:13,Empty URL
+66.249.79.14,United States,Not Found,IE,Desktop,GET,200,10/Jun/2015:18:15:13,http://www.gobankingrates.com/banking/financial-institutions/community-choice-credit-union-central-iowa/
+70.109.176.205,United States,Vermont,Googlebot,Robot,GET,200,10/Jun/2015:18:15:13,Empty URL
+70.109.176.205,United States,Vermont,IE,Desktop,GET,302,10/Jun/2015:18:15:13,http://trc.taboola.com/cnbc/log/3/click?pi=%2Fid%2F102746434&ri=7b8803153bf843d0097dad322f319719&sd=v2_56308b5e6ce5198d76db0f514bf26be6_cd01a24c-d2a7-4323-9158-825d19633411_1433959982_1433959982_CMSXrwEQxAQ&ui=cd01a24c-d2a7-4323-9158-825d19633411&it=video&ii=~~V1~~-2874230367061410224~~YxH8lnf3PB9z_Gxp0c_8TWd4lk-tgVb5aPbxq8opU8UC5xsnLMQkNbbO3QBcrJMnKVsZ4cM6ZySo9FX1U3zSPQ&pt=text&li=rbox-t2m&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fpersonal-finance%2F6-things-warren-buffett-says-should-money-2015%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dcnbc&vi=1433959976962&p=consumertrack-sc&r=87
+205.225.207.5,United States,Not Found,IE,Desktop,GET,200,10/Jun/2015:18:15:13,http://trc.taboola.com/cnbc/log/3/click?pi=%2Fid%2F102746434&ri=7b8803153bf843d0097dad322f319719&sd=v2_56308b5e6ce5198d76db0f514bf26be6_cd01a24c-d2a7-4323-9158-825d19633411_1433959982_1433959982_CMSXrwEQxAQ&ui=cd01a24c-d2a7-4323-9158-825d19633411&it=video&ii=~~V1~~-2874230367061410224~~YxH8lnf3PB9z_Gxp0c_8TWd4lk-tgVb5aPbxq8opU8UC5xsnLMQkNbbO3QBcrJMnKVsZ4cM6ZySo9FX1U3zSPQ&pt=text&li=rbox-t2m&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fpersonal-finance%2F6-things-warren-buffett-says-should-money-2015%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dcnbc&vi=1433959976962&p=consumertrack-sc&r=87
+208.123.79.68,United States,Colorado,IE,Desktop,GET,302,10/Jun/2015:18:15:14,http://trc.taboola.com/bloomberg/log/3/click?pi=http%3A%2F%2Fwww.bloomberg.com%2Fnews%2Farticles%2F2015-06-08%2Fcarbon-sucking-gems-among-last-ditch-climate-change-remedies&ri=1fd864257ea1e04000459994630bbc63&sd=v2_d7401f98d464c883dbdfbfe0fd6522a8_cb87faa5-bd5a-4b79-aa2c-fe0e5defc828_1433959268_1433959268_CNawjgYQxAE&ui=cb87faa5-bd5a-4b79-aa2c-fe0e5defc828&it=video&ii=~~V1~~-1477168167175649564~~YxH8lnf3PB9z_Gxp0c_8TWd4lk-tgVb5aPbxq8opU8UBxV4UkC2rnudm6MoEAV5QUZ1uKgahN1wJoBJnGfM3Mw&pt=text&li=rbox-t2v&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fpersonal-finance%2Fmuch-dollar-worth-around-world%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dbloomberg&vi=1433959267791&p=consumertrack-sc&r=93
+205.225.207.5,United States,Not Found,Nutch,Robot,GET,200,10/Jun/2015:18:15:14,Empty URL
+67.236.7.189,United States,Tennessee,IE,Desktop,GET,200,10/Jun/2015:18:15:14,http://trc.taboola.com/bloomberg/log/3/click?pi=http%3A%2F%2Fwww.bloomberg.com%2Fnews%2Farticles%2F2015-06-08%2Fcarbon-sucking-gems-among-last-ditch-climate-change-remedies&ri=1fd864257ea1e04000459994630bbc63&sd=v2_d7401f98d464c883dbdfbfe0fd6522a8_cb87faa5-bd5a-4b79-aa2c-fe0e5defc828_1433959268_1433959268_CNawjgYQxAE&ui=cb87faa5-bd5a-4b79-aa2c-fe0e5defc828&it=video&ii=~~V1~~-1477168167175649564~~YxH8lnf3PB9z_Gxp0c_8TWd4lk-tgVb5aPbxq8opU8UBxV4UkC2rnudm6MoEAV5QUZ1uKgahN1wJoBJnGfM3Mw&pt=text&li=rbox-t2v&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fpersonal-finance%2Fmuch-dollar-worth-around-world%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dbloomberg&vi=1433959267791&p=consumertrack-sc&r=93
+50.139.219.129,United States,Not Found,Chrome,Desktop,GET,200,10/Jun/2015:18:15:14,http://www.gobankingrates.com/car-loans/heres-used-car-loan-rates-higher/
+76.125.171.65,United States,Pennsylvania,Chrome Mobile WebView,Mobile,POST,204,10/Jun/2015:18:15:15,http://www.gobankingrates.com/find-best-personal-loan-source05/?subid=np3
+76.125.171.65,United States,Pennsylvania,Chrome,Desktop,POST,200,10/Jun/2015:18:15:15,http://www.gobankingrates.com/?keyword=bank+account
+157.55.39.61,United States,Washington,Chrome,Desktop,POST,200,10/Jun/2015:18:15:15,http://www.gobankingrates.com/?keyword=bank+account
+173.17.62.175,United States,Iowa,bingbot,Robot,GET,200,10/Jun/2015:18:15:15,Empty URL
+100.43.85.5,United States,Not Found,IE,Desktop,POST,204,10/Jun/2015:18:15:15,http://www.gobankingrates.com/banking/financial-institutions/community-choice-credit-union-central-iowa/
+76.125.171.65,United States,Pennsylvania,YandexBot,Robot,GET,200,10/Jun/2015:18:15:16,Empty URL
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,POST,204,10/Jun/2015:18:15:16,http://www.gobankingrates.com/?keyword=bank+account
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,302,10/Jun/2015:18:15:16,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+205.225.207.5,United States,Not Found,Chrome,Desktop,GET,301,10/Jun/2015:18:15:17,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+76.125.171.65,United States,Pennsylvania,IE,Desktop,GET,200,10/Jun/2015:18:15:17,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+65.55.219.100,United States,Washington,Chrome,Desktop,POST,200,10/Jun/2015:18:15:17,http://www.gobankingrates.com/?keyword=bank+account
+98.217.63.220,United States,Massachusetts,msnbot,Robot,GET,301,10/Jun/2015:18:15:18,Empty URL
+50.112.95.211,United States,Oregon,Chrome,Desktop,GET,301,10/Jun/2015:18:15:18,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+207.114.153.6,United States,California,NewRelicPingerBot,,HEAD,200,10/Jun/2015:18:15:18,Empty URL
+207.114.153.6,United States,California,Chrome,Desktop,POST,204,10/Jun/2015:18:15:18,http://www.gobankingrates.com/banking/find-cds-now/
+205.225.207.5,United States,Not Found,Chrome,Desktop,GET,200,10/Jun/2015:18:15:18,http://www.gobankingrates.com/banking/find-cds-now/
+207.114.153.6,United States,California,IE,Desktop,POST,200,10/Jun/2015:18:15:18,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+12.151.199.154,United States,Arkansas,Chrome,Desktop,GET,200,10/Jun/2015:18:15:18,http://www.gobankingrates.com/banking/find-cds-now/
+70.109.176.205,United States,Vermont,IE,Desktop,GET,200,10/Jun/2015:18:15:18,http://www.gobankingrates.com/savings-account/how-turn-buy-gift-cards-cash-savings-account/
+65.55.219.100,United States,Washington,IE,Desktop,GET,200,10/Jun/2015:18:15:19,http://www.gobankingrates.com/personal-finance/6-things-warren-buffett-says-should-money-2015/?utm_source=taboola&utm_medium=cpc&utm_content=cnbc
+65.55.219.100,United States,Washington,msnbot,Robot,GET,301,10/Jun/2015:18:15:19,Empty URL
+144.76.22.211,Germany,Not Found,msnbot,Robot,GET,301,10/Jun/2015:18:15:19,Empty URL
+12.151.199.154,United States,Arkansas,de/bot,Robot,GET,200,10/Jun/2015:18:15:19,Empty URL
+65.55.219.100,United States,Washington,IE,Desktop,POST,200,10/Jun/2015:18:15:20,http://www.gobankingrates.com/savings-account/how-turn-buy-gift-cards-cash-savings-account/
+12.151.199.154,United States,Arkansas,msnbot,Robot,GET,200,10/Jun/2015:18:15:20,Empty URL
+76.72.167.90,United States,Pennsylvania,IE,Desktop,POST,200,10/Jun/2015:18:15:21,http://www.gobankingrates.com/savings-account/how-turn-buy-gift-cards-cash-savings-account/
+65.55.208.19,United States,Illinois,PingdomBot,Robot,GET,200,10/Jun/2015:18:15:21,Empty URL
+205.225.207.5,United States,Not Found,msnbot,Robot,GET,301,10/Jun/2015:18:15:21,Empty URL
+98.217.63.220,United States,Massachusetts,IE,Desktop,POST,200,10/Jun/2015:18:15:21,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+70.109.176.205,United States,Vermont,Chrome,Desktop,GET,301,10/Jun/2015:18:15:21,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+198.108.110.184,United States,Michigan,IE,Desktop,POST,200,10/Jun/2015:18:15:22,http://www.gobankingrates.com/personal-finance/6-things-warren-buffett-says-should-money-2015/?utm_source=taboola&utm_medium=cpc&utm_content=cnbc
+12.151.199.154,United States,Arkansas,Chrome,Desktop,POST,200,10/Jun/2015:18:15:22,http://www.gobankingrates.com/personal-finance/ten-years-after-economic-impacts-9-11/
+172.4.240.191,United States,Tennessee,IE,Desktop,POST,200,10/Jun/2015:18:15:22,http://www.gobankingrates.com/savings-account/how-turn-buy-gift-cards-cash-savings-account/
+205.225.207.5,United States,Not Found,Safari,Desktop,POST,200,10/Jun/2015:18:15:22,http://www.gobankingrates.com/personal-finance/personal-finance-loans/?keyword=personal+loan
+173.51.20.52,United States,Not Found,IE,Desktop,GET,200,10/Jun/2015:18:15:22,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,200,10/Jun/2015:18:15:23,http://a.mrktads.net/b?url=140bee063f9765d9b943a88c0d41536b75f04d0301a4add6fa05d2b6ea735b466ccd794e3460d051471ad589cb0f4bbf37edd5203692ecc38475c2365b17cd9a8f4a29ebe1d7e8b21dd1bb2eb700fd530113c83ba2bdd570fbd45388cdcbbc2f520c82bc2102e8b5303db2cc86e70f401067e8fd5c1d99d65644cf3799657b76394d8068710183f5a255feb925eccc0208d84290ce8a6c758fcbccb2f0d3c3ae7802eeb52525b12fb5012c38&subId=9700-1050&ver=3&browser=CHROME%2043&domain=d3d3LnNob3VzZWxhdy5jb20%3D&uid=rrz1f4FDKR2sCWIPGdYB&uidts=1416887564&iQS=request_id%3D555a20ec994c41.09840998%26adId%3D14874111%26keywordId%3D71857%26keyword%3Dbankrate%26keywordSourceId%3D4%26pkwSource%3D%255B6%255D%26cpv%3DMC4wMTc%253D%26advertiser%3D15&d=%7B%22adTimesUTC%22%3A%5B%5D%2C%22adLastSeenUTC%22%3A1429717301%2C%22lastServerAdReturnedUTC%22%3A1433960110%2C%22sgf%22%3A%22%22%2C%22sgte%22%3A%22%22%2C%22uid_score%22%3A50%7D
+108.41.21.13,United States,New York,Chrome,Desktop,GET,302,10/Jun/2015:18:15:23,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+98.217.63.220,United States,Massachusetts,Safari,Desktop,GET,200,10/Jun/2015:18:15:23,https://www.google.com/
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,301,10/Jun/2015:18:15:23,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,301,10/Jun/2015:18:15:24,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+65.55.219.100,United States,Washington,Chrome,Desktop,GET,200,10/Jun/2015:18:15:24,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+52.26.161.243,United States,Oregon,msnbot,Robot,GET,200,10/Jun/2015:18:15:24,Empty URL
+52.26.161.243,United States,Oregon,Chrome,Desktop,GET,200,10/Jun/2015:18:15:24,Empty URL
+52.26.161.243,United States,Oregon,Chrome,Desktop,GET,200,10/Jun/2015:18:15:24,Empty URL
+52.26.161.243,United States,Oregon,Chrome,Desktop,GET,200,10/Jun/2015:18:15:25,Empty URL
+198.108.110.184,United States,Michigan,Chrome,Desktop,GET,200,10/Jun/2015:18:15:25,Empty URL
+174.238.225.16,United States,Not Found,Chrome,Desktop,POST,200,10/Jun/2015:18:15:25,http://www.gobankingrates.com/personal-finance/ten-years-after-economic-impacts-9-11/
+206.229.115.4,United States,Not Found,Mobile Safari,Mobile,GET,200,10/Jun/2015:18:15:25,Empty URL
+98.217.63.220,United States,Massachusetts,IE,Desktop,GET,200,10/Jun/2015:18:15:25,http://www.gobankingrates.com/personal-finance/need-financial-planner/
+104.184.213.24,United States,California,Chrome,Desktop,GET,302,10/Jun/2015:18:15:26,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+108.41.21.13,United States,New York,Chrome,Desktop,GET,200,10/Jun/2015:18:15:26,http://www.gobankingrates.com/banking/financial-institutions/first-choice-bank-california/
+209.133.204.202,United States,Florida,Safari,Desktop,GET,200,10/Jun/2015:18:15:27,http://www.gobankingrates.com/personal-finance/top-10-stores-return-policy/
+65.55.208.19,United States,Illinois,Safari,Desktop,GET,200,10/Jun/2015:18:15:27,Empty URL
+209.133.204.202,United States,Florida,msnbot,Robot,GET,200,10/Jun/2015:18:15:28,Empty URL
+171.161.160.10,United States,Texas,Safari,Desktop,GET,200,10/Jun/2015:18:15:29,http://www.gobankingrates.com/personal-finance/need-financial-planner/
+98.217.63.220,United States,Massachusetts,IE,Desktop,GET,200,10/Jun/2015:18:15:29,"http://www.google.com/url?sa=t&rct=j&q=&esrc=s&frm=1&source=web&cd=3&ved=0CC0QFjACahUKEwiIiNfX3YXGAhWzGIwKHU4LAOA&url=http%3A%2F%2Fwww.gobankingrates.com%2Fcd-rates%2Fmarket-linked-cd%2F&ei=rX54Vcj9KbOxsATOloCADg&usg=AFQjCNGhsExbvtipZRQveIQ9aex-WGLbBA&bvm=bv.95039771,d.cWc"
+206.229.115.4,United States,Not Found,Chrome,Desktop,GET,302,10/Jun/2015:18:15:29,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+205.225.207.5,United States,Not Found,IE,Desktop,POST,200,10/Jun/2015:18:15:29,http://www.gobankingrates.com/banking/choosing-financial-planners-affordable-bank-account/
+12.151.199.154,United States,Arkansas,IE,Desktop,GET,200,10/Jun/2015:18:15:30,Empty URL
+108.41.21.13,United States,New York,IE,Desktop,GET,200,10/Jun/2015:18:15:30,Empty URL
+206.229.115.4,United States,Not Found,Safari,Desktop,POST,200,10/Jun/2015:18:15:30,http://www.gobankingrates.com/personal-finance/top-10-stores-return-policy/
+24.236.207.115,United States,Michigan,IE,Desktop,GET,200,10/Jun/2015:18:15:30,http://www.gobankingrates.com/banking/choosing-financial-planners-affordable-bank-account/
+50.183.23.43,United States,Not Found,Firefox,Desktop,GET,200,10/Jun/2015:18:15:30,http://www.gobankingrates.com/banking/5-bank-services-obsolete-10-years/?utm_source=taboola&utm_medium=cpc&utm_content=latimes
+108.0.10.213,United States,Not Found,Safari,Desktop,GET,200,10/Jun/2015:18:15:30,https://www.google.com/
+52.26.161.243,United States,Oregon,Other,,GET,301,10/Jun/2015:18:15:30,http://www.gobankingrates.com/cd-rates/market-linked-cd/
+209.133.204.202,United States,Florida,Chrome,Desktop,GET,200,10/Jun/2015:18:15:31,Empty URL
+52.26.161.243,United States,Oregon,Safari,Desktop,POST,200,10/Jun/2015:18:15:31,http://www.gobankingrates.com/personal-finance/need-financial-planner/
+100.43.85.5,United States,Not Found,Chrome,Desktop,GET,200,10/Jun/2015:18:15:31,Empty URL
+50.183.23.43,United States,Not Found,YandexBot,Robot,GET,302,10/Jun/2015:18:15:31,Empty URL
+209.133.204.202,United States,Florida,Safari,Desktop,GET,200,10/Jun/2015:18:15:31,http://www.gobankingrates.com/savings-account/why-still-wasting-money-storage-units/
+52.26.161.243,United States,Oregon,Safari,Desktop,POST,200,10/Jun/2015:18:15:31,http://www.gobankingrates.com/personal-finance/need-financial-planner/
+65.55.208.20,United States,Illinois,Chrome,Desktop,GET,200,10/Jun/2015:18:15:31,Empty URL
+171.161.160.10,United States,Texas,msnbot,Robot,GET,200,10/Jun/2015:18:15:32,Empty URL
+65.55.208.34,United States,Illinois,IE,Desktop,GET,301,10/Jun/2015:18:15:32,http://www.gobankingrates.com/cd-rates/market-linked-cd/
+52.26.161.243,United States,Oregon,msnbot,Robot,GET,301,10/Jun/2015:18:15:32,Empty URL
+74.125.19.213,United States,North Carolina,Chrome,Desktop,GET,200,10/Jun/2015:18:15:32,Empty URL
+157.55.39.61,United States,Washington,Other,,GET,301,10/Jun/2015:18:15:32,Empty URL
+98.217.63.220,United States,Massachusetts,bingbot,Robot,GET,200,10/Jun/2015:18:15:32,Empty URL
+50.183.23.43,United States,Not Found,Chrome,Desktop,GET,301,10/Jun/2015:18:15:33,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+74.125.19.213,United States,North Carolina,Safari,Desktop,GET,200,10/Jun/2015:18:15:33,http://www.gobankingrates.com/savings-account/why-still-wasting-money-storage-units/
+209.133.204.202,United States,Florida,Other,,GET,200,10/Jun/2015:18:15:34,Empty URL
+66.249.79.14,United States,Not Found,Safari,Desktop,POST,200,10/Jun/2015:18:15:34,http://www.gobankingrates.com/personal-finance/need-financial-planner/
+68.81.168.223,United States,Pennsylvania,Googlebot,Robot,GET,301,10/Jun/2015:18:15:34,Empty URL
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,404,10/Jun/2015:18:15:34,Empty URL
+184.33.55.185,United States,Washington,Chrome,Desktop,GET,301,10/Jun/2015:18:15:34,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+100.43.85.5,United States,Not Found,Chrome,Desktop,GET,200,10/Jun/2015:18:15:35,Empty URL
+98.217.63.220,United States,Massachusetts,YandexBot,Robot,GET,200,10/Jun/2015:18:15:35,Empty URL
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,301,10/Jun/2015:18:15:35,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+68.206.26.242,United States,Texas,Chrome,Desktop,GET,200,10/Jun/2015:18:15:35,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+207.46.13.17,United States,Washington,IE,Desktop,GET,200,10/Jun/2015:18:15:35,http://www.gobankingrates.com/personal-finance/deadline-countdown-lost-w-2/
+108.34.189.168,United States,Rhode Island,msnbot-media,Robot,GET,301,10/Jun/2015:18:15:35,Empty URL
+66.249.79.14,United States,Not Found,Samsung Internet,Mobile,POST,200,10/Jun/2015:18:15:36,http://www.gobankingrates.com/checking-accounts/how-never-pay-another-bank-overdraft-fee-again/
+65.55.219.98,United States,Washington,Googlebot,Robot,GET,301,10/Jun/2015:18:15:36,Empty URL
+173.17.62.175,United States,Iowa,msnbot,Robot,GET,301,10/Jun/2015:18:15:37,Empty URL
+68.206.26.242,United States,Texas,IE,Desktop,GET,200,10/Jun/2015:18:15:37,http://www.gobankingrates.com/banking/top-iowa-banks-credit-unions/
+65.55.219.98,United States,Washington,IE,Desktop,POST,200,10/Jun/2015:18:15:37,http://www.gobankingrates.com/personal-finance/deadline-countdown-lost-w-2/
+24.90.113.24,United States,New York,msnbot,Robot,GET,301,10/Jun/2015:18:15:38,Empty URL
+207.250.144.45,United States,Minnesota,Chrome,Desktop,GET,200,10/Jun/2015:18:15:38,http://www.gobankingrates.com/personal-finance/35-life-hacks-save-thousands/
+98.217.63.220,United States,Massachusetts,IE,Desktop,GET,200,10/Jun/2015:18:15:38,http://paid.outbrain.com/network/redir?p=pTTfKFjJegZYckw0wUrKsOr6FW0HK7IvlpO_EqEgS4RG4JQxxE9aBg34bKb7czexaNUGTZ6cN9BcMKf7fIqkrkHFMTbTKHzaAcNb6FEbymg286sa17dKk4TdUOwfvTlknYpwSIkre9vsJjg3rRk8I1F8FEnFpkdjHnyOBqluDRhLhAm2iri5_uEDbJKQjNwMIVTb-FwiL7kzFmcP0ivXcH5gerwoxisA3xGGCNooLjs_THPV_UsWL-i8jL2RHzpMz7aeqXwdogcOHEr2O4MuA5lp23kiey2ZzXBa0nAFHr-tilwXnqojgiW-iO-iGK_eQNEox0k8TAh24kw1ym0m34jshBBIhOyg_08BTpUowa4JPd1POyi1le7PS2Z5HS-hdNeuhlanw9sRdeBIMWiKldXsC43vasGnO522qeBncoBR26xpT9rh5wJkD0-V0UcUoQfcIj-ZMloaXg-DqAhecuFlVjImyka70rWWvYHLm8rPmXn2kdLk3cd55qTEO42aXfGMgT7Fn4Tw7m3_fuudtnSVeih0MFVWFfmZByNWHcczd6KXTcFPsJuazV-z97vAvKRrYyGiDsLdDZ3onMeHu4hAY0_bxvj3jNpdq2wUBr8&c=7b1980aa&v=3
+65.55.208.19,United States,Illinois,Chrome,Desktop,GET,301,10/Jun/2015:18:15:38,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+194.187.168.23,France,Not Found,msnbot,Robot,GET,200,10/Jun/2015:18:15:39,Empty URL
+98.217.63.220,United States,Massachusetts,Qwantify,Robot,GET,200,10/Jun/2015:18:15:40,Empty URL
+66.249.79.1,United States,Not Found,Chrome,Desktop,GET,301,10/Jun/2015:18:15:40,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+98.217.63.220,United States,Massachusetts,Googlebot,Robot,GET,200,10/Jun/2015:18:15:41,Empty URL
+71.157.186.161,United States,Not Found,Chrome,Desktop,GET,301,10/Jun/2015:18:15:41,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+123.126.113.132,China,Beijing,IE,Desktop,GET,200,10/Jun/2015:18:15:41,Empty URL
+65.55.208.19,United States,Illinois,Sogou web spider,Robot,GET,200,10/Jun/2015:18:15:41,Empty URL
+65.55.208.19,United States,Illinois,msnbot,Robot,GET,301,10/Jun/2015:18:15:41,Empty URL
+24.90.113.24,United States,New York,msnbot,Robot,GET,301,10/Jun/2015:18:15:42,Empty URL
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,POST,204,10/Jun/2015:18:15:43,http://www.gobankingrates.com/personal-finance/35-life-hacks-save-thousands/
+180.76.15.16,China,Guangdong,Chrome,Desktop,GET,302,10/Jun/2015:18:15:43,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+98.217.63.220,United States,Massachusetts,Baiduspider,Robot,GET,200,10/Jun/2015:18:15:43,Empty URL
+188.165.15.236,France,Not Found,Chrome,Desktop,GET,301,10/Jun/2015:18:15:43,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+98.217.63.220,United States,Massachusetts,AhrefsBot,Robot,GET,200,10/Jun/2015:18:15:44,Empty URL
+199.30.27.2,United States,Washington,Chrome,Desktop,GET,301,10/Jun/2015:18:15:44,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+199.30.27.2,United States,Washington,msnbot,Robot,GET,301,10/Jun/2015:18:15:45,Empty URL
+173.170.223.221,United States,Florida,msnbot,Robot,GET,200,10/Jun/2015:18:15:45,Empty URL
+207.46.13.148,United States,Washington,Google,Tablet,GET,200,10/Jun/2015:18:15:46,http://www.google.com/url?sa=t&rct=j&q=chase%20quickpay%20limit&source=web&cd=7&ved=0CCEQFjAGahUKEwjwiv7e3YXGAhVMNKwKHQ2gANc&url=http%3A%2F%2Fwww.gobankingrates.com%2Fchecking-accounts%2Fdoes-chase-quickpay-really-live-up-promise%2F&ei=vX54VbA4zOiwBY3AgrgN&usg=AFQjCNHuWg1Im2Asvga28hiw-8FhlLabtQ
+199.30.27.2,United States,Washington,bingbot,Robot,GET,200,10/Jun/2015:18:15:46,Empty URL
+108.224.30.205,United States,Texas,msnbot,Robot,GET,301,10/Jun/2015:18:15:46,Empty URL
+98.217.63.220,United States,Massachusetts,Chrome Mobile WebView,Mobile,GET,200,10/Jun/2015:18:15:46,http://www.google.com/
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,301,10/Jun/2015:18:15:47,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+68.81.168.223,United States,Pennsylvania,Chrome,Desktop,GET,200,10/Jun/2015:18:15:47,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+68.81.168.223,United States,Pennsylvania,Chrome,Desktop,GET,200,10/Jun/2015:18:15:47,http://www.gobankingrates.com/personal-finance/28-savings-hacks-kohls-shoppers/
+68.81.168.223,United States,Pennsylvania,Chrome,Desktop,GET,200,10/Jun/2015:18:15:47,http://www.gobankingrates.com/personal-finance/28-savings-hacks-kohls-shoppers/
+66.152.115.223,United States,New York,Chrome,Desktop,POST,200,10/Jun/2015:18:15:48,http://www.gobankingrates.com/personal-finance/28-savings-hacks-kohls-shoppers/
+68.81.168.223,United States,Pennsylvania,Outlook,Desktop,GET,301,10/Jun/2015:18:15:48,Empty URL
+199.107.16.132,United States,District of Columbia,Chrome,Desktop,POST,200,10/Jun/2015:18:15:49,http://www.gobankingrates.com/personal-finance/28-savings-hacks-kohls-shoppers/
+50.97.52.131,United States,Virginia,Firefox,Desktop,GET,200,10/Jun/2015:18:15:50,http://www.gobankingrates.com/savings-account/average-american-profile-earnings-spending-saving-money-today/
+108.0.10.213,United States,Not Found,com robot,Robot,GET,200,10/Jun/2015:18:15:50,Empty URL
+199.107.16.132,United States,District of Columbia,Other,,GET,301,10/Jun/2015:18:15:51,http://www.gobankingrates.com/personal-finance/where-invest-after-recession/
+47.19.83.34,United States,New York,Firefox,Desktop,POST,200,10/Jun/2015:18:15:51,http://www.gobankingrates.com/savings-account/average-american-profile-earnings-spending-saving-money-today/
+173.170.223.221,United States,Florida,Chrome,Desktop,GET,301,10/Jun/2015:18:15:52,https://www.google.com/
+157.55.39.61,United States,Washington,Google,Tablet,POST,200,10/Jun/2015:18:15:52,http://www.gobankingrates.com/checking-accounts/does-chase-quickpay-really-live-up-promise/
+199.107.16.132,United States,District of Columbia,bingbot,Robot,GET,200,10/Jun/2015:18:15:52,Empty URL
+74.125.40.18,United States,North Carolina,Firefox,Desktop,GET,200,10/Jun/2015:18:15:53,http://www.gobankingrates.com/savings-account/average-american-profile-earnings-spending-saving-money-today/
+172.4.240.191,United States,Tennessee,Other,,GET,200,10/Jun/2015:18:15:53,Empty URL
+46.105.117.148,France,Not Found,Safari,Desktop,POST,204,10/Jun/2015:18:15:53,http://www.gobankingrates.com/personal-finance/personal-finance-loans/?keyword=personal+loan
+104.175.72.126,United States,California,Firefox,Desktop,GET,200,10/Jun/2015:18:15:53,Empty URL
+199.107.16.132,United States,District of Columbia,Chrome,Desktop,GET,200,10/Jun/2015:18:15:53,http://trc.taboola.com/businessinsider/log/3/click?pi=%2Fwsj-op-ed-calls-asians-the-new-jews-of-harvard-admissions-2015-5&ri=c6d39ff5df08cc9e2170df0f283f5bf3&sd=v2_f229eed76ff11fd6daeabb3f410dd37c_7b8c325d-b3ad-40c7-9e32-599c1bd46adb_1433959400_1433960029_CLqXrwEQjgY&ui=7b8c325d-b3ad-40c7-9e32-599c1bd46adb&it=video&ii=~~V1~~5326405301995830126~~YxH8lnf3PB9z_Gxp0c_8TWd4lk-tgVb5aPbxq8opU8UBoFzv3cQbBIFxGZ3nyNGj7YqT_oa54LmNfkA_2wUFPA&pt=text&li=rbox-t2v&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fpersonal-finance%2F10-problems-only-frugal-people-understand%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dbusinessinsider&vi=1433960019839&p=consumertrack-sc&r=12
+98.217.63.220,United States,Massachusetts,Firefox,Desktop,POST,200,10/Jun/2015:18:15:53,http://www.gobankingrates.com/savings-account/average-american-profile-earnings-spending-saving-money-today/
+173.170.223.221,United States,Florida,Chrome,Desktop,GET,200,10/Jun/2015:18:15:54,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+70.44.127.103,United States,Pennsylvania,Google,Tablet,POST,204,10/Jun/2015:18:15:54,http://www.gobankingrates.com/checking-accounts/does-chase-quickpay-really-live-up-promise/
+65.55.208.20,United States,Illinois,Mobile Safari UI/WKWebView,Tablet,GET,302,10/Jun/2015:18:15:54,http://trc.taboola.com/nbcnews-app/log/3/click?pi=%2Fscience%2Fscience-news%2Fancient-dna-reveals-how-bronze-age-changed-europe-n372711&ri=18bbeb3ec1214474dd03747873215171&sd=v2_511935cdd35480a12be78b57da47dcae_70b70874-8325-427a-bc72-6df45d14ff0a_1433959350_1433959350_CNawjgYQ0O89&ui=70b70874-8325-427a-bc72-6df45d14ff0a&it=video&ii=~~V1~~1719512940036147663~~YxH8lnf3PB9z_Gxp0c_8TWd4lk-tgVb5aPbxq8opU8WPtkMJ1q3wCSZ9o2liNPjNfDzaa6XSaFCR4R-rsBwKhw&pt=text&li=rbox-t2m&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fpersonal-finance%2F10-things-never-knew-100-bill%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dnbcnews-app&vi=1433959350892&p=consumertrack-sc&r=48
+65.55.208.19,United States,Illinois,msnbot,Robot,GET,301,10/Jun/2015:18:15:54,Empty URL
+65.55.208.20,United States,Illinois,msnbot,Robot,GET,301,10/Jun/2015:18:15:54,Empty URL
+70.44.127.103,United States,Pennsylvania,msnbot,Robot,GET,200,10/Jun/2015:18:15:54,Empty URL
+98.217.63.220,United States,Massachusetts,Mobile Safari UI/WKWebView,Tablet,GET,200,10/Jun/2015:18:15:54,http://trc.taboola.com/nbcnews-app/log/3/click?pi=%2Fscience%2Fscience-news%2Fancient-dna-reveals-how-bronze-age-changed-europe-n372711&ri=18bbeb3ec1214474dd03747873215171&sd=v2_511935cdd35480a12be78b57da47dcae_70b70874-8325-427a-bc72-6df45d14ff0a_1433959350_1433959350_CNawjgYQ0O89&ui=70b70874-8325-427a-bc72-6df45d14ff0a&it=video&ii=~~V1~~1719512940036147663~~YxH8lnf3PB9z_Gxp0c_8TWd4lk-tgVb5aPbxq8opU8WPtkMJ1q3wCSZ9o2liNPjNfDzaa6XSaFCR4R-rsBwKhw&pt=text&li=rbox-t2m&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fpersonal-finance%2F10-things-never-knew-100-bill%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dnbcnews-app&vi=1433959350892&p=consumertrack-sc&r=48
+173.170.223.221,United States,Florida,Chrome,Desktop,GET,302,10/Jun/2015:18:15:55,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+98.217.63.220,United States,Massachusetts,Google,Tablet,GET,200,10/Jun/2015:18:15:55,http://www.gobankingrates.com/checking-accounts/does-chase-quickpay-really-live-up-promise/
+104.175.72.126,United States,California,Chrome,Desktop,GET,301,10/Jun/2015:18:15:55,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+104.175.72.126,United States,California,Chrome,Desktop,GET,200,10/Jun/2015:18:15:56,http://www.gobankingrates.com/personal-finance/10-problems-only-frugal-people-understand/?utm_source=taboola&utm_medium=cpc&utm_content=businessinsider
+108.1.210.11,United States,Texas,Chrome,Desktop,GET,200,10/Jun/2015:18:15:56,http://www.gobankingrates.com/personal-finance/10-problems-only-frugal-people-understand/?utm_source=taboola&utm_medium=cpc&utm_content=businessinsider
+98.217.63.220,United States,Massachusetts,IE,Desktop,GET,200,10/Jun/2015:18:15:56,http://trc.taboola.com/bloomberg/log/3/click?pi=http%3A%2F%2Fwww.bloomberg.com%2Fnews%2Farticles%2F2015-06-10%2Fthe-new-big-short-reveals-itself-toothpaste-and-toilet-paper&ri=0f03459bbbc9feb93f26aa7417ec0315&sd=v2_9bded3d02c83d98fd3e324e785ddbe34_278bcb53-c342-42a9-9e7d-b0da7583788f_1433959219_1433959219_CNawjgYQxAE&ui=278bcb53-c342-42a9-9e7d-b0da7583788f&it=video&ii=~~V1~~-1477168167175649564~~YxH8lnf3PB9z_Gxp0c_8TWd4lk-tgVb5aPbxq8opU8X3FaOOo38sLSMsJp6S4YQJUZ1uKgahN1wJoBJnGfM3Mw&pt=text&li=rbox-t2v&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fpersonal-finance%2Fmuch-dollar-worth-around-world%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dbloomberg&vi=1433959222595&p=consumertrack-sc&r=12
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,301,10/Jun/2015:18:15:56,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+171.161.160.10,United States,Texas,Chrome,Desktop,GET,200,10/Jun/2015:18:15:56,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+173.220.85.235,United States,New York,IE,Desktop,GET,200,10/Jun/2015:18:15:56,Empty URL
+171.161.160.10,United States,Texas,Chrome,Desktop,GET,302,10/Jun/2015:18:15:57,http://trc.taboola.com/bloomberg/log/3/click?pi=http%3A%2F%2Fwww.bloomberg.com%2Fquote%2Fgaptq%3Aus&ri=4dee0b34b9af53eadf575a84efb5b085&sd=v2_22c9afa7e6237829c4cee894cafe56d1_43743a6c-9fc6-45ff-a2e0-613598ea199c_1433959940_1433959940_CAwQxAE&ui=43743a6c-9fc6-45ff-a2e0-613598ea199c&it=video&ii=~~V1~~3117653910353787614~~D6Ilrf0adCu7ZLWlcXFOrGd4lk-tgVb5aPbxq8opU8UTIgBh2YGTYrWXGjXGYNqq9S-C7C5x5rk9qtBfCt-hig&pt=category&li=rbox-c2v&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fstrategy-saving-million-source04%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dbloomberg&vi=1433959940767&p=consumertrack-sc&r=71
+104.175.72.126,United States,California,IE,Desktop,GET,301,10/Jun/2015:18:15:57,Empty URL
+78.40.124.16,France,Not Found,Chrome,Desktop,POST,200,10/Jun/2015:18:15:57,http://www.gobankingrates.com/personal-finance/10-problems-only-frugal-people-understand/?utm_source=taboola&utm_medium=cpc&utm_content=businessinsider
+206.213.251.32,United States,Not Found,PingdomBot,Robot,GET,200,10/Jun/2015:18:15:57,Empty URL
+206.213.251.32,United States,Not Found,Chrome,Desktop,GET,302,10/Jun/2015:18:15:58,http://trc.taboola.com/bloomberg/log/3/click?pi=http%3A%2F%2Fwww.bloomberg.com%2Fnews%2Farticles%2F2015-06-10%2Fthese-are-global-banking-s-winners-and-losers-since-the-crisis&ri=35f3c0d5dfccf93478169d8a583c2b61&sd=v2_9a670c5ed7f9e368a6c53eb4e3719eab_c623f04a-cd1c-458f-b421-55238716885c_1433959513_1433960119_CLaXrwEQxAE&ui=c623f04a-cd1c-458f-b421-55238716885c&it=video&ii=~~V1~~-1477168167175649564~~YxH8lnf3PB9z_Gxp0c_8TWd4lk-tgVb5aPbxq8opU8WqtmQx1mqzwyAUuH4TR3ikUZ1uKgahN1wJoBJnGfM3Mw&pt=text&li=rbox-t2v&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fpersonal-finance%2Fmuch-dollar-worth-around-world%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dbloomberg&vi=1433960003634&p=consumertrack-sc&r=90
+198.203.181.181,United States,Minnesota,Chrome,Desktop,GET,200,10/Jun/2015:18:15:58,http://trc.taboola.com/bloomberg/log/3/click?pi=http%3A%2F%2Fwww.bloomberg.com%2Fnews%2Farticles%2F2015-06-10%2Fthese-are-global-banking-s-winners-and-losers-since-the-crisis&ri=35f3c0d5dfccf93478169d8a583c2b61&sd=v2_9a670c5ed7f9e368a6c53eb4e3719eab_c623f04a-cd1c-458f-b421-55238716885c_1433959513_1433960119_CLaXrwEQxAE&ui=c623f04a-cd1c-458f-b421-55238716885c&it=video&ii=~~V1~~-1477168167175649564~~YxH8lnf3PB9z_Gxp0c_8TWd4lk-tgVb5aPbxq8opU8WqtmQx1mqzwyAUuH4TR3ikUZ1uKgahN1wJoBJnGfM3Mw&pt=text&li=rbox-t2v&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fpersonal-finance%2Fmuch-dollar-worth-around-world%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dbloomberg&vi=1433960003634&p=consumertrack-sc&r=90
+108.1.210.11,United States,Texas,Chrome,Desktop,GET,200,10/Jun/2015:18:15:58,http://www.gobankingrates.com/personal-finance/video5-quick-ways-raise-credit-score/
+98.217.63.220,United States,Massachusetts,IE,Desktop,GET,200,10/Jun/2015:18:15:58,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,301,10/Jun/2015:18:15:58,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+207.46.13.17,United States,Washington,Chrome,Desktop,GET,301,10/Jun/2015:18:15:59,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+199.30.27.2,United States,Washington,bingbot,Robot,GET,301,10/Jun/2015:18:15:59,Empty URL
+206.213.251.32,United States,Not Found,msnbot,Robot,GET,301,10/Jun/2015:18:15:59,Empty URL
+108.1.210.11,United States,Texas,Chrome,Desktop,GET,200,10/Jun/2015:18:16:00,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+207.250.144.45,United States,Minnesota,IE,Desktop,POST,200,10/Jun/2015:18:16:00,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+208.43.129.251,United States,Washington,IE,Desktop,GET,200,10/Jun/2015:18:16:01,http://www.gobankingrates.com/savings-account/average-american-profile-earnings-spending-saving-money-today/
+206.213.251.32,United States,Not Found,curl,,GET,200,10/Jun/2015:18:16:01,Empty URL
+104.175.72.126,United States,California,Chrome,Desktop,POST,200,10/Jun/2015:18:16:01,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+109.97.0.172,Romania,Judetul Alba,Chrome,Desktop,GET,200,10/Jun/2015:18:16:02,http://www.gobankingrates.com/personal-finance/10-problems-only-frugal-people-understand/?utm_source=taboola&utm_medium=cpc&utm_content=businessinsider
+206.213.251.32,United States,Not Found,Chrome,Desktop,POST,200,10/Jun/2015:18:16:02,http://www.gobankingrates.com/savings-account/average-wedding-cost-actually-nowhere-near-25000/
+100.43.85.5,United States,Not Found,Chrome,Desktop,GET,200,10/Jun/2015:18:16:03,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+199.30.27.2,United States,Washington,YandexBot,Robot,GET,200,10/Jun/2015:18:16:03,Empty URL
+109.97.0.172,Romania,Judetul Alba,msnbot,Robot,GET,200,10/Jun/2015:18:16:03,Empty URL
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,POST,200,10/Jun/2015:18:16:03,http://www.gobankingrates.com/savings-account/average-wedding-cost-actually-nowhere-near-25000/
+199.30.27.2,United States,Washington,Chrome,Desktop,GET,200,10/Jun/2015:18:16:03,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+206.213.251.32,United States,Not Found,msnbot,Robot,GET,200,10/Jun/2015:18:16:03,Empty URL
+108.1.210.11,United States,Texas,Chrome,Desktop,POST,200,10/Jun/2015:18:16:04,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+178.255.154.2,Czechia,Hlavni mesto Praha,IE,Desktop,POST,200,10/Jun/2015:18:16:04,http://www.gobankingrates.com/personal-finance/much-dollar-worth-around-world/?utm_source=taboola&utm_medium=cpc&utm_content=bloomberg
+207.46.13.148,United States,Washington,PingdomBot,Robot,GET,200,10/Jun/2015:18:16:04,Empty URL
+108.1.210.11,United States,Texas,msnbot-media,Robot,GET,301,10/Jun/2015:18:16:05,Empty URL
+98.217.63.220,United States,Massachusetts,IE,Desktop,GET,200,10/Jun/2015:18:16:05,Empty URL
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,301,10/Jun/2015:18:16:05,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+199.30.27.2,United States,Washington,Chrome,Desktop,GET,200,10/Jun/2015:18:16:05,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+98.217.63.220,United States,Massachusetts,msnbot,Robot,GET,301,10/Jun/2015:18:16:06,Empty URL
+207.46.13.148,United States,Washington,Chrome,Desktop,GET,302,10/Jun/2015:18:16:07,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+98.217.63.220,United States,Massachusetts,bingbot,Robot,GET,200,10/Jun/2015:18:16:07,Empty URL
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,301,10/Jun/2015:18:16:08,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,301,10/Jun/2015:18:16:08,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+109.97.0.172,Romania,Judetul Alba,Chrome,Desktop,GET,200,10/Jun/2015:18:16:08,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+75.177.152.40,United States,North Carolina,Chrome,Desktop,POST,204,10/Jun/2015:18:16:09,http://www.gobankingrates.com/savings-account/average-wedding-cost-actually-nowhere-near-25000/
+75.177.152.40,United States,North Carolina,IE,Desktop,GET,200,10/Jun/2015:18:16:09,Empty URL
+198.203.181.181,United States,Minnesota,IE,Desktop,GET,200,10/Jun/2015:18:16:10,http://www.gobankingrates.com/personal-finance/?keyword=personal%2afinance
+73.194.135.111,United States,Not Found,Chrome,Desktop,GET,200,10/Jun/2015:18:16:10,http://www.gobankingrates.com/personal-finance/is-850-credit-score-possible/
+98.217.63.220,United States,Massachusetts,Firefox,Desktop,GET,200,10/Jun/2015:18:16:10,http://trc.taboola.com/bloomberg/log/3/click?pi=http%3A%2F%2Fwww.bloomberg.com%2Fnews%2Farticles%2F2015-06-10%2Frussian-warships-approach-canada-frigate-with-harper-aboard&ri=a0399bf635387d08cb2c97ea36d9c256&sd=v2_405dcab54c486a351ae5c7c746185e12_12a6c552-890c-4ceb-b555-c3540cba4f90_1433959382_1433959382_CLqXrwEQxAE&ui=12a6c552-890c-4ceb-b555-c3540cba4f90&it=video&ii=~~V1~~3117653910353787614~~D6Ilrf0adCu7ZLWlcXFOrGd4lk-tgVb5aPbxq8opU8XxJ7wjXEMfvLSI7WZ_1Z-SUZ1uKgahN1wJoBJnGfM3Mw&pt=text&li=rbox-t2v&redir=http%3A%2F%2Fwww.gobankingrates.com%2Fstrategy-saving-million-source04%2F%3Futm_source%3Dtaboola%26utm_medium%3DCPC%26utm_content%3Dbloomberg&vi=1433959381529&p=consumertrack-sc&r=71
+98.217.63.220,United States,Massachusetts,Chrome,Desktop,GET,301,10/Jun/2015:18:16:11,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+157.55.39.9,United States,Washington,Chrome,Desktop,GET,200,10/Jun/2015:18:16:11,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+198.203.181.181,United States,Minnesota,bingbot,Robot,GET,200,10/Jun/2015:18:16:11,Empty URL
+65.55.208.19,United States,Illinois,Chrome,Desktop,GET,200,10/Jun/2015:18:16:11,http://www.gobankingrates.com/personal-finance/is-850-credit-score-possible/
+65.55.208.19,United States,Illinois,msnbot,Robot,GET,301,10/Jun/2015:18:16:11,Empty URL
+65.55.219.100,United States,Washington,msnbot,Robot,GET,301,10/Jun/2015:18:16:12,Empty URL
+98.217.63.220,United States,Massachusetts,msnbot,Robot,GET,301,10/Jun/2015:18:16:12,Empty URL
+188.143.232.72,Russia,Not Found,Chrome,Desktop,GET,302,10/Jun/2015:18:16:13,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+65.55.208.19,United States,Illinois,IE,Desktop,GET,302,10/Jun/2015:18:16:13,http://www.gobankingrates.com/newsletters/
+204.152.200.42,United States,California,msnbot,Robot,GET,200,10/Jun/2015:18:16:13,Empty URL
+98.217.63.220,United States,Massachusetts,PingdomBot,Robot,GET,200,10/Jun/2015:18:16:14,Empty URL
+65.55.219.98,United States,Washington,Chrome,Desktop,GET,301,10/Jun/2015:18:16:14,http://www.gobankingrates.com/personal-finance/32-brands-lifetime-warranties/
+188.143.232.72,Russia,Not Found,msnbot,Robot,GET,301,10/Jun/2015:18:16:14,Empty URL

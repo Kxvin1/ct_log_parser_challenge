@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  ctlogparserchallenge:
+    image: ctlogparserchallenge
+    build:
+      context: .
+      dockerfile: ./Dockerfile

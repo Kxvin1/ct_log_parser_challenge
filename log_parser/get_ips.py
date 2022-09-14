@@ -14,10 +14,12 @@ def get_ips(filename):
     """
     cft(filename)
 
-    with open(filename) as f:
-        log = f.read()
+    ip_address_list = []
 
-        ip_address_regexp = r"[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
-        ip_address_list = re.findall(ip_address_regexp, log)
+    with open(filename) as f:
+        lines = f.readlines()
+        for line in lines:
+            ip_address = line.split()[0]
+            ip_address_list.append(ip_address)
 
         return ip_address_list
