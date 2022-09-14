@@ -41,12 +41,6 @@ def find_user_info(ips_list, filename):
     output = defaultdict(list)
     temp_list = []
 
-    print(len(ips_list), "ips list")
-    print(len(user_agent_info), "user_agent_info")
-    print(len(method_info), "method_info")
-    print(len(api_status_info), "api_status_info")
-    print(len(get_date_and_time_info), "get_date_and_time_info")
-    print(len(get_url_info), "get_url_info")
     for index, ip in enumerate(ips_list):
         response = requests.get(f"https://geolocation-db.com/json/{ip}").json()
         country_name = response["country_name"]
@@ -99,8 +93,6 @@ def export_to_csv(dict):
         writer.writerow(headers)
 
         for item in dict.items():
-            print(item, "item")
-            print("~~")
 
             ip = item[1][0][0]
             country_name = item[1][0][1]
