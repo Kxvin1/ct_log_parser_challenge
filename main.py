@@ -1,4 +1,6 @@
 from collections import defaultdict
+from timeit import default_timer as timer
+from datetime import timedelta
 
 from log_parser.get_user_agent import convert_user_agent_to_list
 from log_parser.other_headers import (
@@ -41,10 +43,17 @@ def find_user_info(ips_list, filename):
     output = defaultdict(list)
     temp_list = []
 
+    print(f"########################")
+    print("Starting fetches...")
+    print(f"########################\n")
+    start = timer()
+    # ...
+
     for index, ip in enumerate(ips_list):
         response = requests.get(f"https://geolocation-db.com/json/{ip}").json()
         country_name = response["country_name"]
         state = response["state"]
+        print(f"Fetched response {response} -- currently at index: {index}")
 
         if state == None:
             state = "Not Found"
@@ -61,9 +70,26 @@ def find_user_info(ips_list, filename):
                 get_url_info[index - 1],
             )
         )
+        print(f"Added to list. Continuing...\n")
 
+    end = timer()
+    print(f"########################")
+    print(f"Finished fetching and storing data after {timedelta(seconds=end-start)}")
+    print(f"########################\n")
+
+    print(f"########################")
+    print(f"Starting dictionary creation...")
+    print(f"########################\n")
+
+    start = timer()
     for index, info in enumerate(temp_list):
         output[index].append(info)
+        print(f"Added to dictionary: {info}\n")
+    end = timer()
+
+    print(f"########################")
+    print(f"Finished creating dictionary after {timedelta(seconds=end-start)}.")
+    print(f"########################\n")
 
     return output
 
@@ -92,8 +118,12 @@ def export_to_csv(dict):
 
         writer.writerow(headers)
 
-        for item in dict.items():
+        print(f"########################")
+        print(f"Starting writes to csv...")
+        print(f"########################\n")
+        start = timer()
 
+        for item in dict.items():
             ip = item[1][0][0]
             country_name = item[1][0][1]
             state = item[1][0][2]
@@ -117,6 +147,10 @@ def export_to_csv(dict):
                     url,
                 )
             )
+    end = timer()
+    print(f"########################")
+    print(f"Finished writing to csv after {timedelta(seconds=end-start)}.")
+    print(f"########################")
 
 
 # runs file
