@@ -1,14 +1,14 @@
 import unittest
 
-from log_parser.get_ips import get_ips
-from log_parser.other_headers import (
+from .log_parser.get_ips import get_ips
+from .log_parser.other_headers import (
     get_method_header,
     get_api_status,
     get_date_and_time,
     get_url,
 )
 
-from log_parser.get_user_agent import (
+from .log_parser.get_user_agent import (
     convert_user_agent_to_list,
     extract_useragent,
     get_useragent_info,
