@@ -1,6 +1,8 @@
 from collections import defaultdict
 from timeit import default_timer as timer
 from datetime import timedelta
+from requests import get as ip_fetch
+from csv import writer as csv_writer
 
 from log_parser.get_user_agent import convert_user_agent_to_list
 from log_parser.other_headers import (
@@ -11,10 +13,6 @@ from log_parser.other_headers import (
 )
 from log_parser.get_ips import get_ips
 from log_parser.confirm_file_type import confirm_file_type as cft
-
-
-import requests
-import csv
 
 
 def find_user_info(ips_list, filename):
@@ -50,7 +48,7 @@ def find_user_info(ips_list, filename):
     # ...
 
     for index, ip in enumerate(ips_list):
-        response = requests.get(f"https://geolocation-db.com/json/{ip}").json()
+        response = ip_fetch(f"https://geolocation-db.com/json/{ip}").json()
         country_name = response["country_name"]
         state = response["state"]
         print(f"Fetched response {response} -- currently at index: {index}")
@@ -102,7 +100,7 @@ def main(dict):
     """
 
     with open("output.csv", "w") as csvfile:
-        writer = csv.writer(csvfile)
+        writer = csv_writer(csvfile)
 
         headers = [
             "IP",
@@ -155,4 +153,4 @@ def main(dict):
 
 # runs script
 if __name__ == "__main__":
-    main(find_user_info(get_ips("log2.log"), "log2.log"))
+    main(find_user_info(get_ips("log-test.log"), "log-test.log"))

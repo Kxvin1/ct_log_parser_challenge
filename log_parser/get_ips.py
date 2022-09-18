@@ -1,5 +1,3 @@
-import re
-
 from .confirm_file_type import confirm_file_type as cft
 
 
