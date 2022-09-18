@@ -29,27 +29,27 @@ class TestFilename(unittest.TestCase):
     """
 
     def test_get_ips(self):
-        res = get_ips("log-test.log")
+        res = get_ips("./log_files/log-test.log")
         self.assertEqual(res, ["207.114.153.6"])
 
     def test_get_method_header(self):
-        res = get_method_header("log-test.log")
+        res = get_method_header("./log_files/log-test.log")
         self.assertEqual(res, ["GET"])
 
     def test_get_api_status(self):
-        res = get_api_status("log-test.log")
+        res = get_api_status("./log_files/log-test.log")
         self.assertEqual(res, ["200"])
 
     def test_get_date_and_time(self):
-        res = get_date_and_time("log-test.log")
+        res = get_date_and_time("./log_files/log-test.log")
         self.assertEqual(res, ["10/Jun/2015:18:14:56"])
 
     def test_get_url(self):
-        res = get_url("log-test.log")
+        res = get_url("./log_files/log-test.log")
         self.assertEqual(res, ["http://www.gobankingrates.com/banking/find-cds-now/"])
 
     def test_convert_user_agent_to_list(self):
-        res = convert_user_agent_to_list("log-test.log")
+        res = convert_user_agent_to_list("./log_files/log-test.log")
         self.assertEqual(res, [("Chrome", "Desktop", "Windows")])
 
     def test_extract_useragent(self):

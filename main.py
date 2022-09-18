@@ -151,6 +151,9 @@ def main(dict):
     print(f"########################")
 
 
-# runs script
+### EDIT LOG FILE HERE
+log_file = "./log_files/log-test.log"
+
+
 if __name__ == "__main__":
-    main(find_user_info(get_ips("log-test.log"), "log-test.log"))
+    main(find_user_info(get_ips(log_file), log_file))
