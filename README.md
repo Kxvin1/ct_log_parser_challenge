@@ -33,14 +33,12 @@ all of the ip addresses in the log2.log file.
 
 ```bash
 If you would like it to run a different log file of your own,
-change both of the string parameters at the bottom of the `main.py` file.
-It must have an extension of .log, example below:
-```
+change the variable 'log_file' at the bottom of the `main.py` file.
 
-Example:
-```py
-if __name__ == "__main__":
-    export_to_csv(find_user_info(get_ips("name-of-log-file.log"), "name-of-log-file.log"))
+Example below:
+
+### EDIT LOG FILE HERE
+log_file = "./log_files/log-test.log"
 ```
 
 ### 5. Example images of what the csv files look like
