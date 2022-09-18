@@ -94,7 +94,7 @@ def find_user_info(ips_list, filename):
     return output
 
 
-def export_to_csv(dict):
+def main(dict):
     """Takes a dictionary and their associated information and exports it to a CSV file
 
     Args:
@@ -153,6 +153,6 @@ def export_to_csv(dict):
     print(f"########################")
 
 
-# runs file
+# runs script
 if __name__ == "__main__":
-    export_to_csv(find_user_info(get_ips("log2.log"), "log2.log"))
+    main(find_user_info(get_ips("log2.log"), "log2.log"))
