@@ -54,7 +54,7 @@ def find_user_info(ips_list, filename):
         country_name = response["country_name"]
         state = response["state"]
         print(
-            f"Fetched Response: \n {formatted_response} \n-- Progress: {index}/{len(ips_list)}"
+            f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_list)}"
         )
 
         if state == None:
