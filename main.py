@@ -3,6 +3,7 @@ from timeit import default_timer as timer
 from datetime import timedelta
 from requests import get as ip_fetch
 from csv import writer as csv_writer
+from json import dumps
 
 from log_parser.get_user_agent import convert_user_agent_to_list
 from log_parser.other_headers import (
@@ -45,13 +46,16 @@ def find_user_info(ips_list, filename):
     print("Starting fetches...")
     print(f"########################\n")
     start = timer()
-    # ...
 
     for index, ip in enumerate(ips_list):
         response = ip_fetch(f"https://geolocation-db.com/json/{ip}").json()
+        formatted_response = dumps(response, indent=4)
+
         country_name = response["country_name"]
         state = response["state"]
-        print(f"Fetched response {response} -- currently at index: {index}")
+        print(
+            f"Fetched Response: \n {formatted_response} \n-- Progress: {index}/{len(ips_list)}"
+        )
 
         if state == None:
             state = "Not Found"
@@ -68,7 +72,7 @@ def find_user_info(ips_list, filename):
                 get_url_info[index - 1],
             )
         )
-        print(f"Added to list. Continuing...\n")
+        print(f"\nAdded to list.\n")
 
     end = timer()
     print(f"########################")
