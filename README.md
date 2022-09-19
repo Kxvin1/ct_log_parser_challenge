@@ -1,6 +1,8 @@
-Instructions for starting project locally
+----
+## Docker Repo: https://hub.docker.com/r/kevinzy/logger_dockerize
+----
 
-## Getting started
+## Instructions for starting project locally
 
 ### 1. Clone this repository (main branch)
 
