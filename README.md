@@ -39,8 +39,14 @@ change the variable 'log_file' at the bottom of the `main.py` file.
 
 Example below:
 
+# change this:
 ### EDIT LOG FILE HERE
 log_file = "./log_files/log-test.log"
+
+
+# to something like this (after adding your file to "./log_files" directory of the project):
+### EDIT LOG FILE HERE
+log_file = "./log_files/your-log-file.log"
 ```
 
 ### 5. Example images of what the csv files look like
