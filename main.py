@@ -86,7 +86,6 @@ def find_user_info(ips_list, filename):
     start = timer()
     for index, info in enumerate(temp_list):
         output[index].append(info)
-        print(f"Added to dictionary: {info}\n")
     end = timer()
 
     print(f"########################")
@@ -156,7 +155,7 @@ def main(dict):
 
 
 ### EDIT LOG FILE HERE
-log_file = "./log_files/log-test.log"
+log_file = "./log_files/log2.log"
 
 
 if __name__ == "__main__":
