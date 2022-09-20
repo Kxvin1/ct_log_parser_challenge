@@ -7,7 +7,7 @@
 ### 1. Clone this repository (main branch)
 
 ```bash
-git clone https://github.com/Kxvin1/ct_log_parser_challenge.git
+git clone https://github.com/Kxvin1/log_parser.git
 ```
 
 ### 2. Install dependencies
