@@ -2,6 +2,7 @@
 
 from collections import defaultdict
 from logging import raiseExceptions
+from re import S
 from timeit import default_timer as timer
 from datetime import timedelta
 from requests import get as ip_fetch
@@ -18,6 +19,7 @@ from log_parser.other_headers import (
 from log_parser.get_ips import get_ips
 from log_parser.confirm_file_type import confirm_file_type
 
+STATE = "Not Found"
 
 def find_user_info(ips_list, filename):
     confirm_file_type(filename)
@@ -45,19 +47,14 @@ def find_user_info(ips_list, filename):
         formatted_response = dumps(response, indent=4)
 
         country_name = response["country_name"]
-        state = response["state"]
-        print(
-            f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_list)}"
-        )
-
-        if state == None:
-            state = "Not Found"
+        STATE = response["state"]
+        print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_list)}")
 
         temp_list.append(
             (
                 ip,
                 country_name,
-                state,
+                STATE,
                 user_agent_info[index - 1],
                 method_info[index - 1],
                 api_status_info[index - 1],
