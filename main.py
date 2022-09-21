@@ -6,7 +6,6 @@ from requests import get as ip_fetch
 from csv import writer as csv_writer
 from json import dumps
 
-from log_parser.get_ips import get_ips
 from log_parser.confirm_file_type import confirm_file_type
 
 from log_parser.read_file import read_file
@@ -16,6 +15,7 @@ STATE = "Not Found"
 def get_log_data(filename: str) -> list:
     dict_with_info = read_file(filename)
 
+    ip = dict_with_info["ip"]
     ua_browser = dict_with_info["browser"]
     ua_device = dict_with_info["device"]
     method_info = dict_with_info["method"]
@@ -30,12 +30,13 @@ def get_log_data(filename: str) -> list:
         api_status_info,
         get_date_and_time_info,
         get_url_info,
+        ip,
     ]
 
     return output
 
 
-def find_user_info(ips_dict: dict[str, str], filename: str) -> list:
+def find_user_info(filename: str) -> list:
 
     confirm_file_type(filename)
     log_data = get_log_data(filename)
@@ -48,21 +49,23 @@ def find_user_info(ips_dict: dict[str, str], filename: str) -> list:
     print(f"########################\n")
     start = timer()
 
-    for index, ip in enumerate(ips_dict):
+    for index in range(len(log_data[6])):
+        ip = log_data[6][index]
+
         try:
-            response = ip_fetch(f"https://geolocation-db.com/json/{ips_dict[ip]}").json()
+            response = ip_fetch(f"https://geolocation-db.com/json/{ip}").json()
         except:
-            raise Exception(f"Could not fetch from https://geolocation-db.com/json/{ips_dict[ip]}")
+            raise Exception(f"Could not fetch from https://geolocation-db.com/json/{ip}")
 
         formatted_response = dumps(response, indent=4)
 
         country_name = response["country_name"]
         STATE = response["state"]
-        print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_dict)}")
+        print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(log_data[6])}")
 
         user_info_storage.append(
             (
-                ips_dict[ip],
+                ip,
                 country_name,
                 STATE,
                 log_data[0][index],
@@ -97,7 +100,7 @@ def find_user_info(ips_dict: dict[str, str], filename: str) -> list:
 
 
 def main():
-    user_info_list = find_user_info(get_ips(log_file), log_file)
+    user_info_list = find_user_info(log_file)
 
     with open("output.csv", "w") as csvfile:
         writer = csv_writer(csvfile)

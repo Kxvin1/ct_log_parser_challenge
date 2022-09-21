@@ -60,11 +60,15 @@ def read_file(filename: str) -> dict:
         "api_status_code": [],
         "date_and_time": [],
         "url": [],
+        "ip": [],
     }
 
     with open(filename) as f:
         lines = f.readlines()
         for line in lines:
+            ip = line.split()[0]
+            output["ip"].append(ip)
+
             method = line.split()[5][1:]
             output["method"].append(method)
 
