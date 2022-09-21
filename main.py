@@ -1,4 +1,7 @@
+# fmt: off
+
 from collections import defaultdict
+from logging import raiseExceptions
 from timeit import default_timer as timer
 from datetime import timedelta
 from requests import get as ip_fetch
@@ -34,7 +37,11 @@ def find_user_info(ips_list, filename):
     start = timer()
 
     for index, ip in enumerate(ips_list):
-        response = ip_fetch(f"https://geolocation-db.com/json/{ip}").json()
+        try:
+            response = ip_fetch(f"https://geolocation-db.com/json/{ip}").json()
+        except:
+            raise Exception(f"Could not fetch from https://geolocation-db.com/json/{ip}")
+
         formatted_response = dumps(response, indent=4)
 
         country_name = response["country_name"]
