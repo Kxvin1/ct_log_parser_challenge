@@ -28,9 +28,7 @@ def get_log_info(filename):
     get_date_and_time_info = get_date_and_time(filename)
     get_url_info = get_url(filename)
 
-
     output = [user_agent_info, method_info, api_status_info, get_date_and_time_info, get_url_info]
-
     return output
 
 def find_user_info(ips_dict, filename):
@@ -68,11 +66,6 @@ def find_user_info(ips_dict, filename):
                 log_data[2][index],
                 log_data[3][index],
                 log_data[4][index],
-                # user_agent_info[index],
-                # method_info[index],
-                # api_status_info[index],
-                # get_date_and_time_info[index],
-                # get_url_info[index],
             )
         )
         print(f"\nAdded to list.\n")
