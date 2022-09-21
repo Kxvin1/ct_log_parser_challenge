@@ -78,13 +78,3 @@ def convert_user_agent_to_dict_device(filename: str) -> dict:
             user_agent_device[index] = user_agent[1]
 
     return user_agent_device
-
-
-# test_string = '100.43.85.5 - - [10/Jun/2015:18:15:10 +0000] "GET /cd-rates/north-star-credit-union/6-month-cd-rate/ HTTP/1.1" 301 5 "-" "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)'
-
-
-# extract_useragent(test_string)
-
-# print(get_useragent_info(test_string))
-
-# print(convert_user_agent_to_dict_device("./log_files/log-test.log"))

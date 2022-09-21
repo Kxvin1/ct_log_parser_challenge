@@ -19,7 +19,7 @@ from log_parser.confirm_file_type import confirm_file_type
 STATE = "Not Found"
 
 
-def get_log_info(filename: str) -> list:
+def get_log_data(filename: str) -> list:
     ua_browser = convert_user_agent_to_dict_browser(filename)
     ua_device = convert_user_agent_to_dict_device(filename)
     method_info = get_method_header(filename)
@@ -39,13 +39,13 @@ def get_log_info(filename: str) -> list:
     return output
 
 
-def find_user_info(ips_dict: dict[str, str], filename: str) -> dict:
+def find_user_info(ips_dict: dict[str, str], filename: str) -> list:
 
     confirm_file_type(filename)
-    log_data = get_log_info(filename)
+    log_data = get_log_data(filename)
 
-    output = []
-    temp_list = []
+    user_info_output = []
+    user_info_storage = []
 
     print(f"########################")
     print("Starting fetches...")
@@ -64,7 +64,7 @@ def find_user_info(ips_dict: dict[str, str], filename: str) -> dict:
         STATE = response["state"]
         print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_dict)}")
 
-        temp_list.append(
+        user_info_storage.append(
             (
                 ips_dict[ip],
                 country_name,
@@ -89,19 +89,19 @@ def find_user_info(ips_dict: dict[str, str], filename: str) -> dict:
     print(f"########################\n")
 
     start = timer()
-    for index, info in enumerate(temp_list):
-        output.append(info)
+    for index, user_info in enumerate(user_info_storage):
+        user_info_output.append(user_info)
     end = timer()
 
     print(f"########################")
     print(f"Finished creating dictionary after {timedelta(seconds=end-start)}.")
     print(f"########################\n")
 
-    return output
+    return user_info_output
 
 
 def main():
-    dict = find_user_info(get_ips(log_file), log_file)
+    user_info_list = find_user_info(get_ips(log_file), log_file)
 
     with open("output.csv", "w") as csvfile:
         writer = csv_writer(csvfile)
@@ -125,8 +125,8 @@ def main():
         print(f"########################\n")
         start = timer()
 
-        for tuple in dict:
-            writer.writerow(tuple)
+        for user_info in user_info_list:
+            writer.writerow(user_info)
 
         end = timer()
         print(f"########################")
@@ -135,7 +135,7 @@ def main():
 
 
 ### EDIT LOG FILE HERE
-log_file = "./log_files/log2.log"
+log_file = "./log_files/log-test.log"
 
 
 if __name__ == "__main__":
