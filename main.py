@@ -85,7 +85,10 @@ def find_user_info(ips_list, filename):
     return output
 
 
-def main(dict):
+def main():
+    dict = find_user_info(get_ips(log_file), log_file)
+
+
     with open("output.csv", "w") as csvfile:
         writer = csv_writer(csvfile)
 
@@ -143,4 +146,4 @@ log_file = "./log_files/log2.log"
 
 
 if __name__ == "__main__":
-    main(find_user_info(get_ips(log_file), log_file))
+    main()
