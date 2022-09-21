@@ -1,4 +1,3 @@
-# fmt: off
 from user_agents import parse
 
 
@@ -25,7 +24,9 @@ def extract_useragent(ua_string: str) -> list:
 
         if len_of_string and quote_end == ua_string[-1]:
             if len_of_string == 1 or ua_string[-2] != "\\":
-                useragent_row.append(" ".join(quote_part)[1:-1].replace("\\" + quote_end, quote_end))
+                useragent_row.append(
+                    " ".join(quote_part)[1:-1].replace("\\" + quote_end, quote_end)
+                )
                 quote_end = None
                 quote_part = None
     return useragent_row
@@ -51,30 +52,41 @@ def get_useragent_info(ua_str: str) -> tuple:
     return browser, device_type, os
 
 
-def convert_user_agent_to_dict_browser(filename: str) -> dict:
-    user_agent_browser = {}
+def read_file(filename: str) -> list:
+    output = {
+        "browser": [],
+        "device": [],
+        "method": [],
+        "api_status_code": [],
+        "date_and_time": [],
+        "url": [],
+    }
 
     with open(filename) as f:
         lines = f.readlines()
-        for index, line in enumerate(lines):
-            result = extract_useragent(line)
-            ua_string = result[8]
+        for line in lines:
+            method = line.split()[5][1:]
+            output["method"].append(method)
+
+            api_status_code = line.split()[8]
+            output["api_status_code"].append(api_status_code)
+
+            date_and_time = line.split()[3][1:]
+            output["date_and_time"].append(date_and_time)
+
+            url = line.split()[10][1:-1]
+            if url == "-":
+                url = "Empty URL"
+            else:
+                url = url
+            output["url"].append(url)
+
+            ua_result = extract_useragent(line)
+            ua_string = ua_result[8]
             user_agent = get_useragent_info(ua_string)
-            user_agent_browser[index] = user_agent[0]
+            user_agent_browser = user_agent[0]
+            output["browser"].append(user_agent_browser)
+            user_agent_device = user_agent[1]
+            output["device"].append(user_agent_device)
 
-    return user_agent_browser
-
-
-
-def convert_user_agent_to_dict_device(filename: str) -> dict:
-    user_agent_device = {}
-
-    with open(filename) as f:
-        lines = f.readlines()
-        for index, line in enumerate(lines):
-            result = extract_useragent(line)
-            ua_string = result[8]
-            user_agent = get_useragent_info(ua_string)
-            user_agent_device[index] = user_agent[1]
-
-    return user_agent_device
+    return output

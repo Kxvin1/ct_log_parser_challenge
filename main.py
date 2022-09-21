@@ -6,26 +6,22 @@ from requests import get as ip_fetch
 from csv import writer as csv_writer
 from json import dumps
 
-from log_parser.get_user_agent import convert_user_agent_to_dict_device, convert_user_agent_to_dict_browser
-from log_parser.other_headers import (
-    get_api_status,
-    get_date_and_time,
-    get_method_header,
-    get_url,
-)
 from log_parser.get_ips import get_ips
 from log_parser.confirm_file_type import confirm_file_type
 
+from log_parser.read_file import read_file
+
 STATE = "Not Found"
 
-
 def get_log_data(filename: str) -> list:
-    ua_browser = convert_user_agent_to_dict_browser(filename)
-    ua_device = convert_user_agent_to_dict_device(filename)
-    method_info = get_method_header(filename)
-    api_status_info = get_api_status(filename)
-    get_date_and_time_info = get_date_and_time(filename)
-    get_url_info = get_url(filename)
+    dict_with_info = read_file(filename)
+
+    ua_browser = dict_with_info["browser"]
+    ua_device = dict_with_info["device"]
+    method_info = dict_with_info["method"]
+    api_status_info = dict_with_info["api_status_code"]
+    get_date_and_time_info = dict_with_info["date_and_time"]
+    get_url_info = dict_with_info["url"]
 
     output = [
         ua_browser,
@@ -135,7 +131,7 @@ def main():
 
 
 ### EDIT LOG FILE HERE
-log_file = "./log_files/log-test.log"
+log_file = "./log_files/log2.log"
 
 
 if __name__ == "__main__":
