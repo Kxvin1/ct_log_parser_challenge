@@ -1,8 +1,6 @@
 # fmt: off
 
 from collections import defaultdict
-from logging import raiseExceptions
-from re import S
 from timeit import default_timer as timer
 from datetime import timedelta
 from requests import get as ip_fetch
