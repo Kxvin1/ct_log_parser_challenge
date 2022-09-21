@@ -52,7 +52,7 @@ def get_useragent_info(ua_str: str) -> tuple:
     return browser, device_type, os
 
 
-def read_file(filename: str) -> list:
+def read_file(filename: str) -> dict:
     output = {
         "browser": [],
         "device": [],
