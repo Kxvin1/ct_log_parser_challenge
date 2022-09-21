@@ -1,92 +1,75 @@
+# fmt: off
 from user_agents import parse
 
-from .confirm_file_type import confirm_file_type as cft
 
+def extract_useragent(ua_string):
+    useragent_row = []
+    quote_end = None
+    quote_part = None
 
-def extract_useragent(s):
-    """Parses the user agent string into a list of strings
-
-    Args:
-        s (str): the string to be parsed
-
-    Returns:
-        list: A list of strings
-    """
-
-    row = []
-    qe = qp = None  # quote end character (qe) and quote parts (qp)
-    for s in s.replace("\r", "").replace("\n", "").split(" "):
-        if qp:
-            qp.append(s)
-        elif "" == s:  # blanks
-            row.append("")
-        elif '"' == s[0]:  # begin " quote "
-            qp = [s]
-            qe = '"'
-        elif "[" == s[0]:  # begin [ quote ]
-            qp = [s]
-            qe = "]"
+    for ua_string in ua_string.replace("\r", "").replace("\n", "").split(" "):
+        if quote_part:
+            quote_part.append(ua_string)
+        elif "" == ua_string:  # blanks
+            useragent_row.append("")
+        elif '"' == ua_string[0]:  # begin " quote "
+            quote_part = [ua_string]
+            quote_end = '"'
+        elif "[" == ua_string[0]:  # begin [ quote ]
+            quote_part = [ua_string]
+            quote_end = "]"
         else:
-            row.append(s)
+            useragent_row.append(ua_string)
 
-        l = len(s)
-        if l and qe == s[-1]:  # end quote
-            if l == 1 or s[-2] != "\\":  # don't end on escaped quotes
-                row.append(" ".join(qp)[1:-1].replace("\\" + qe, qe))
-                qp = qe = None
-    return row
+        len_of_string = len(ua_string)
+
+        if len_of_string and quote_end == ua_string[-1]:
+            if len_of_string == 1 or ua_string[-2] != "\\":
+                useragent_row.append(" ".join(quote_part)[1:-1].replace("\\" + quote_end, quote_end))
+                quote_end = None
+                quote_part = None
+    return useragent_row
 
 
 def get_useragent_info(ua_str):
-    """The get_useragent_info function takes a user agent (ua) string and returns a tuple of browser, device type, and operating system
-
-    Args:
-        ua_str (str): The user agent string to parse
-
-    Returns:
-        tuple: A tuple of the browser, device type, and operating system
-    """
-
     user_agent = parse(ua_str)
     browser = user_agent.browser.family
-    os = "{}".format(user_agent.os.family)
+    os = str(user_agent.os.family)
 
     device_type = ""
-
     if user_agent.is_mobile:
         device_type = "Mobile"
-    if user_agent.is_tablet:
+    elif user_agent.is_tablet:
         device_type = "Tablet"
-    if user_agent.is_pc:
+    elif user_agent.is_pc:
         device_type = "Desktop"
-    if user_agent.is_bot:
+    elif user_agent.is_bot:
         device_type = "Robot"
 
-    device_type = "{}".format(device_type)
+    device_type = str(device_type)
 
     return browser, device_type, os
 
 
 def convert_user_agent_to_list(filename):
-    """Read the log file and extracts all user agent info, specifically device and browser
-
-    Args:
-        filename (file): the name of the file that contains the log
-
-    Returns:
-        list: A list of strings containing the user agent info
-    """
-    cft(filename)
-
     user_agent_info = []
 
     with open(filename) as f:
         lines = f.readlines()
         for line in lines:
-            s = line
-            result = extract_useragent(s)
+            result = extract_useragent(line)
             ua_string = result[8]
             user_agent = get_useragent_info(ua_string)
             user_agent_info.append(user_agent)
 
     return user_agent_info
+
+
+# test_string = '100.43.85.5 - - [10/Jun/2015:18:15:10 +0000] "GET /cd-rates/north-star-credit-union/6-month-cd-rate/ HTTP/1.1" 301 5 "-" "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)'
+
+
+# extract_useragent(test_string)
+
+# print(get_useragent_info(test_string))
+
+# print(convert_user_agent_to_list("./log_files/log-test.log"))
