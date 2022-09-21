@@ -2,7 +2,7 @@
 from user_agents import parse
 
 
-def extract_useragent(ua_string):
+def extract_useragent(ua_string: str) -> list:
     useragent_row = []
     quote_end = None
     quote_part = None
@@ -31,7 +31,7 @@ def extract_useragent(ua_string):
     return useragent_row
 
 
-def get_useragent_info(ua_str):
+def get_useragent_info(ua_str: str) -> tuple:
     user_agent = parse(ua_str)
     browser = user_agent.browser.family
     os = str(user_agent.os.family)
@@ -51,7 +51,7 @@ def get_useragent_info(ua_str):
     return browser, device_type, os
 
 
-def convert_user_agent_to_dict(filename):
+def convert_user_agent_to_dict(filename: str) -> dict:
     user_agent_info = {}
 
     with open(filename) as f:

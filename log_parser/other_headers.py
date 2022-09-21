@@ -1,5 +1,5 @@
 # fmt: off
-def get_method_header(filename):
+def get_method_header(filename: str) -> dict:
     method_dict = {}
 
     with open(filename) as f:
@@ -11,7 +11,7 @@ def get_method_header(filename):
     return method_dict
 
 
-def get_api_status(filename):
+def get_api_status(filename: str) -> dict:
     api_status_dict = {}
 
     with open(filename) as f:
@@ -23,7 +23,7 @@ def get_api_status(filename):
     return api_status_dict
 
 
-def get_date_and_time(filename):
+def get_date_and_time(filename: str) -> dict:
     date_and_time_dict = {}
 
     with open(filename) as f:
@@ -35,7 +35,7 @@ def get_date_and_time(filename):
     return date_and_time_dict
 
 
-def get_url(filename):
+def get_url(filename: str) -> dict:
     url_dict = {}
 
     with open(filename) as f:

@@ -1,4 +1,4 @@
-def get_ips(filename):
+def get_ips(filename: str) -> dict:
     ip_address_list = {}
 
     with open(filename) as f:

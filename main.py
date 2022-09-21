@@ -5,6 +5,7 @@ from timeit import default_timer as timer
 from datetime import timedelta
 from requests import get as ip_fetch
 from csv import writer as csv_writer
+from csv import DictWriter as dict_writer
 from json import dumps
 
 from log_parser.get_user_agent import convert_user_agent_to_dict
@@ -19,7 +20,7 @@ from log_parser.confirm_file_type import confirm_file_type
 
 STATE = "Not Found"
 
-def get_log_info(filename):
+def get_log_info(filename: str) -> list:
     user_agent_info = convert_user_agent_to_dict(filename)
     method_info = get_method_header(filename)
     api_status_info = get_api_status(filename)
@@ -29,12 +30,12 @@ def get_log_info(filename):
     output = [user_agent_info, method_info, api_status_info, get_date_and_time_info, get_url_info]
     return output
 
-def find_user_info(ips_dict, filename):
+def find_user_info(ips_dict: dict[str, str], filename: str) -> dict:
 
     confirm_file_type(filename)
     log_data = get_log_info(filename)
 
-    output = defaultdict(list)
+    output = {}
     temp_list = []
 
     print(f"########################")
@@ -79,6 +80,8 @@ def find_user_info(ips_dict, filename):
 
     start = timer()
     for index, info in enumerate(temp_list):
+        if index not in output:
+            output[index] = []
         output[index].append(info)
     end = timer()
 
@@ -91,7 +94,6 @@ def find_user_info(ips_dict, filename):
 
 def main():
     dict = find_user_info(get_ips(log_file), log_file)
-
 
     with open("output.csv", "w") as csvfile:
         writer = csv_writer(csvfile)
@@ -114,6 +116,7 @@ def main():
         print(f"Starting writes to csv...")
         print(f"########################\n")
         start = timer()
+
 
         for item in dict.items():
             ip = item[1][0][0]
