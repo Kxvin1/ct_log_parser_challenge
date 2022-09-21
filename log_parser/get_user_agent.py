@@ -51,16 +51,16 @@ def get_useragent_info(ua_str):
     return browser, device_type, os
 
 
-def convert_user_agent_to_list(filename):
-    user_agent_info = []
+def convert_user_agent_to_dict(filename):
+    user_agent_info = {}
 
     with open(filename) as f:
         lines = f.readlines()
-        for line in lines:
+        for index, line in enumerate(lines):
             result = extract_useragent(line)
             ua_string = result[8]
             user_agent = get_useragent_info(ua_string)
-            user_agent_info.append(user_agent)
+            user_agent_info[index] = user_agent
 
     return user_agent_info
 

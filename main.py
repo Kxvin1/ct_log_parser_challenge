@@ -9,7 +9,7 @@ from requests import get as ip_fetch
 from csv import writer as csv_writer
 from json import dumps
 
-from log_parser.get_user_agent import convert_user_agent_to_list
+from log_parser.get_user_agent import convert_user_agent_to_dict
 from log_parser.other_headers import (
     get_api_status,
     get_date_and_time,
@@ -21,14 +21,22 @@ from log_parser.confirm_file_type import confirm_file_type
 
 STATE = "Not Found"
 
-def find_user_info(ips_list, filename):
-    confirm_file_type(filename)
-
-    user_agent_info = convert_user_agent_to_list(filename)
+def get_log_info(filename):
+    user_agent_info = convert_user_agent_to_dict(filename)
     method_info = get_method_header(filename)
     api_status_info = get_api_status(filename)
     get_date_and_time_info = get_date_and_time(filename)
     get_url_info = get_url(filename)
+
+
+    output = [user_agent_info, method_info, api_status_info, get_date_and_time_info, get_url_info]
+
+    return output
+
+def find_user_info(ips_dict, filename):
+
+    confirm_file_type(filename)
+    log_data = get_log_info(filename)
 
     output = defaultdict(list)
     temp_list = []
@@ -38,28 +46,33 @@ def find_user_info(ips_list, filename):
     print(f"########################\n")
     start = timer()
 
-    for index, ip in enumerate(ips_list):
+    for index, ip in enumerate(ips_dict):
         try:
-            response = ip_fetch(f"https://geolocation-db.com/json/{ip}").json()
+            response = ip_fetch(f"https://geolocation-db.com/json/{ips_dict[ip]}").json()
         except:
-            raise Exception(f"Could not fetch from https://geolocation-db.com/json/{ip}")
+            raise Exception(f"Could not fetch from https://geolocation-db.com/json/{ips_dict[ip]}")
 
         formatted_response = dumps(response, indent=4)
 
         country_name = response["country_name"]
         STATE = response["state"]
-        print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_list)}")
+        print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_dict)}")
 
         temp_list.append(
             (
-                ip,
+                ips_dict[ip],
                 country_name,
                 STATE,
-                user_agent_info[index - 1],
-                method_info[index - 1],
-                api_status_info[index - 1],
-                get_date_and_time_info[index - 1],
-                get_url_info[index - 1],
+                log_data[0][index],
+                log_data[1][index],
+                log_data[2][index],
+                log_data[3][index],
+                log_data[4][index],
+                # user_agent_info[index],
+                # method_info[index],
+                # api_status_info[index],
+                # get_date_and_time_info[index],
+                # get_url_info[index],
             )
         )
         print(f"\nAdded to list.\n")
