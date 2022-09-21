@@ -16,18 +16,6 @@ from log_parser.get_user_agent import (
 
 
 class TestFilename(unittest.TestCase):
-    """
-    Test the functions:
-    1. get_ips
-    2. get_method_header
-    3. get_api_status
-    4. get_date_and_time
-    5. get_url
-    6. convert_user_agent_to_list
-    7. extract_useragent
-    8. get_useragent_info
-    """
-
     def test_get_ips(self):
         res = get_ips("./log_files/log-test.log")
         self.assertEqual(res, ["207.114.153.6"])

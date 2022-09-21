@@ -17,20 +17,6 @@ from log_parser.confirm_file_type import confirm_file_type
 
 
 def find_user_info(ips_list, filename):
-    """Takes in a list of IP addresses and a file (expects a log file).
-    It then iterates through the list of IP addresses and uses the user_agent_info list to find the device and browser used.
-    Then it uses the ips_list list to find the country name and state of the IP address.
-    Uses helper functions to add data to the final dictionary output.
-
-    Args:
-        ips_list (list): the list of IP addresses we want to track
-        filename (file): the name of the file that contains the logs
-
-    Returns:
-        dictionary: A dictionary with the key being the index of the IP address in the list of IP addresses.
-        The value is a list of tuples. Each tuple contains the IP address, country name, state, and user agent info (device and browser)
-    """
-
     confirm_file_type(filename)
 
     user_agent_info = convert_user_agent_to_list(filename)
@@ -96,12 +82,6 @@ def find_user_info(ips_list, filename):
 
 
 def main(dict):
-    """Takes a dictionary and their associated information and exports it to a CSV file
-
-    Args:
-        dict (dictionary): the dictionary to be exported to csv
-    """
-
     with open("output.csv", "w") as csvfile:
         writer = csv_writer(csvfile)
 
