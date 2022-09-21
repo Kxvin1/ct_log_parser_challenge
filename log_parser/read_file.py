@@ -54,13 +54,13 @@ def get_useragent_info(ua_str: str) -> tuple:
 
 def read_file(filename: str) -> dict:
     output = {
+        "ip": [],
         "browser": [],
         "device": [],
         "method": [],
         "api_status_code": [],
         "date_and_time": [],
         "url": [],
-        "ip": [],
     }
 
     with open(filename) as f:
@@ -68,6 +68,16 @@ def read_file(filename: str) -> dict:
         for line in lines:
             ip = line.split()[0]
             output["ip"].append(ip)
+
+            ua_result = extract_useragent(line)
+            ua_string = ua_result[8]
+            user_agent = get_useragent_info(ua_string)
+
+            user_agent_browser = user_agent[0]
+            output["browser"].append(user_agent_browser)
+
+            user_agent_device = user_agent[1]
+            output["device"].append(user_agent_device)
 
             method = line.split()[5][1:]
             output["method"].append(method)
@@ -84,13 +94,5 @@ def read_file(filename: str) -> dict:
             else:
                 url = url
             output["url"].append(url)
-
-            ua_result = extract_useragent(line)
-            ua_string = ua_result[8]
-            user_agent = get_useragent_info(ua_string)
-            user_agent_browser = user_agent[0]
-            output["browser"].append(user_agent_browser)
-            user_agent_device = user_agent[1]
-            output["device"].append(user_agent_device)
 
     return output

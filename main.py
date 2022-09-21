@@ -2,7 +2,7 @@
 
 from timeit import default_timer as timer
 from datetime import timedelta
-from requests import get as ip_fetch
+from requests import get
 from csv import writer as csv_writer
 from json import dumps
 
@@ -51,9 +51,15 @@ def find_user_info(filename: str) -> list:
 
     for index in range(len(log_data[6])):
         ip = log_data[6][index]
+        browser = log_data[0][index]
+        device = log_data[1][index]
+        method = log_data[2][index]
+        api_status = log_data[3][index]
+        date_and_time = log_data[4][index]
+        url = log_data[5][index]
 
         try:
-            response = ip_fetch(f"https://geolocation-db.com/json/{ip}").json()
+            response = get(f"https://geolocation-db.com/json/{ip}").json()
         except:
             raise Exception(f"Could not fetch from https://geolocation-db.com/json/{ip}")
 
@@ -68,12 +74,12 @@ def find_user_info(filename: str) -> list:
                 ip,
                 country_name,
                 STATE,
-                log_data[0][index],
-                log_data[1][index],
-                log_data[2][index],
-                log_data[3][index],
-                log_data[4][index],
-                log_data[5][index],
+                browser,
+                device,
+                method,
+                api_status,
+                date_and_time,
+                url,
             )
         )
         print(f"\nAdded to list.\n")
