@@ -51,8 +51,8 @@ def get_useragent_info(ua_str: str) -> tuple:
     return browser, device_type, os
 
 
-def convert_user_agent_to_dict(filename: str) -> dict:
-    user_agent_info = {}
+def convert_user_agent_to_dict_browser(filename: str) -> dict:
+    user_agent_browser = {}
 
     with open(filename) as f:
         lines = f.readlines()
@@ -60,9 +60,24 @@ def convert_user_agent_to_dict(filename: str) -> dict:
             result = extract_useragent(line)
             ua_string = result[8]
             user_agent = get_useragent_info(ua_string)
-            user_agent_info[index] = user_agent
+            user_agent_browser[index] = user_agent[0]
 
-    return user_agent_info
+    return user_agent_browser
+
+
+
+def convert_user_agent_to_dict_device(filename: str) -> dict:
+    user_agent_device = {}
+
+    with open(filename) as f:
+        lines = f.readlines()
+        for index, line in enumerate(lines):
+            result = extract_useragent(line)
+            ua_string = result[8]
+            user_agent = get_useragent_info(ua_string)
+            user_agent_device[index] = user_agent[1]
+
+    return user_agent_device
 
 
 # test_string = '100.43.85.5 - - [10/Jun/2015:18:15:10 +0000] "GET /cd-rates/north-star-credit-union/6-month-cd-rate/ HTTP/1.1" 301 5 "-" "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)'
@@ -72,4 +87,4 @@ def convert_user_agent_to_dict(filename: str) -> dict:
 
 # print(get_useragent_info(test_string))
 
-# print(convert_user_agent_to_list("./log_files/log-test.log"))
+# print(convert_user_agent_to_dict_device("./log_files/log-test.log"))
