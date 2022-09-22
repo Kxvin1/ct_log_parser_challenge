@@ -93,7 +93,7 @@ def find_user_info(filename: str) -> list:
     print(f"########################\n")
 
     start = timer()
-    for index, user_info in enumerate(user_info_storage):
+    for user_info in user_info_storage:
         user_info_output.append(user_info)
     end = timer()
 
