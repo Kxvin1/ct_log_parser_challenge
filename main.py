@@ -1,75 +1,84 @@
-from collections import defaultdict
+# fmt: off
+
 from timeit import default_timer as timer
 from datetime import timedelta
-from requests import get as ip_fetch
+from requests import get
 from csv import writer as csv_writer
 from json import dumps
 
-from log_parser.get_user_agent import convert_user_agent_to_list
-from log_parser.other_headers import (
-    get_api_status,
-    get_date_and_time,
-    get_method_header,
-    get_url,
-)
-from log_parser.get_ips import get_ips
-from log_parser.confirm_file_type import confirm_file_type as cft
+from log_parser.file_checker import is_valid_file
+from log_parser.read_file import read_file
+
+STATE = "Not Found"
+
+def get_log_data(filename: str) -> list:
+    dict_with_info = read_file(filename)
+
+    ip = dict_with_info["ip"]
+    ua_browser = dict_with_info["browser"]
+    ua_device = dict_with_info["device"]
+    method_info = dict_with_info["method"]
+    api_status_info = dict_with_info["api_status_code"]
+    get_date_and_time_info = dict_with_info["date_and_time"]
+    get_url_info = dict_with_info["url"]
+
+    output = [
+        ua_browser,
+        ua_device,
+        method_info,
+        api_status_info,
+        get_date_and_time_info,
+        get_url_info,
+        ip,
+    ]
+
+    return output
 
 
-def find_user_info(ips_list, filename):
-    """Takes in a list of IP addresses and a file (expects a log file).
-    It then iterates through the list of IP addresses and uses the user_agent_info list to find the device and browser used.
-    Then it uses the ips_list list to find the country name and state of the IP address.
-    Uses helper functions to add data to the final dictionary output.
+def find_user_info(filename: str) -> list:
 
-    Args:
-        ips_list (list): the list of IP addresses we want to track
-        filename (file): the name of the file that contains the logs
+    is_valid_file(filename)
+    log_data = get_log_data(filename)
 
-    Returns:
-        dictionary: A dictionary with the key being the index of the IP address in the list of IP addresses.
-        The value is a list of tuples. Each tuple contains the IP address, country name, state, and user agent info (device and browser)
-    """
-
-    cft(filename)
-
-    user_agent_info = convert_user_agent_to_list(filename)
-    method_info = get_method_header(filename)
-    api_status_info = get_api_status(filename)
-    get_date_and_time_info = get_date_and_time(filename)
-    get_url_info = get_url(filename)
-
-    output = defaultdict(list)
-    temp_list = []
+    user_info_output = []
+    user_info_storage = []
 
     print(f"########################")
     print("Starting fetches...")
     print(f"########################\n")
     start = timer()
 
-    for index, ip in enumerate(ips_list):
-        response = ip_fetch(f"https://geolocation-db.com/json/{ip}").json()
+    for index in range(len(log_data[6])):
+        ip = log_data[6][index]
+        browser = log_data[0][index]
+        device = log_data[1][index]
+        method = log_data[2][index]
+        api_status = log_data[3][index]
+        date_and_time = log_data[4][index]
+        url = log_data[5][index]
+
+        try:
+            response = get(f"https://geolocation-db.com/json/{ip}").json()
+        except:
+            raise Exception(f'Data for "{ip}" not found at https://geolocation-db.com/json/{ip} \nExiting program...')
+
         formatted_response = dumps(response, indent=4)
 
         country_name = response["country_name"]
-        state = response["state"]
-        print(
-            f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_list)}"
-        )
+        STATE = response["state"]
+        print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(log_data[6])}")
 
-        if state == None:
-            state = "Not Found"
-
-        temp_list.append(
+        user_info_storage.append(
             (
                 ip,
                 country_name,
-                state,
-                user_agent_info[index - 1],
-                method_info[index - 1],
-                api_status_info[index - 1],
-                get_date_and_time_info[index - 1],
-                get_url_info[index - 1],
+                STATE,
+                browser,
+                device,
+                method,
+                api_status,
+                date_and_time,
+                url,
             )
         )
         print(f"\nAdded to list.\n")
@@ -84,23 +93,19 @@ def find_user_info(ips_list, filename):
     print(f"########################\n")
 
     start = timer()
-    for index, info in enumerate(temp_list):
-        output[index].append(info)
+    for user_info in user_info_storage:
+        user_info_output.append(user_info)
     end = timer()
 
     print(f"########################")
     print(f"Finished creating dictionary after {timedelta(seconds=end-start)}.")
     print(f"########################\n")
 
-    return output
+    return user_info_output
 
 
-def main(dict):
-    """Takes a dictionary and their associated information and exports it to a CSV file
-
-    Args:
-        dict (dictionary): the dictionary to be exported to csv
-    """
+def main():
+    user_info_list = find_user_info(log_file)
 
     with open("output.csv", "w") as csvfile:
         writer = csv_writer(csvfile)
@@ -124,34 +129,13 @@ def main(dict):
         print(f"########################\n")
         start = timer()
 
-        for item in dict.items():
-            ip = item[1][0][0]
-            country_name = item[1][0][1]
-            state = item[1][0][2]
-            user_agent_browser = item[1][0][3][0]
-            user_agent_device = item[1][0][3][1]
-            method = item[1][0][4]
-            status_code = item[1][0][5]
-            date_and_time = item[1][0][6]
-            url = item[1][0][7]
+        for user_info in user_info_list:
+            writer.writerow(user_info)
 
-            writer.writerow(
-                (
-                    ip,
-                    country_name,
-                    state,
-                    user_agent_browser,
-                    user_agent_device,
-                    method,
-                    status_code,
-                    date_and_time,
-                    url,
-                )
-            )
-    end = timer()
-    print(f"########################")
-    print(f"Finished writing to csv after {timedelta(seconds=end-start)}.")
-    print(f"########################")
+        end = timer()
+        print(f"########################")
+        print(f"Finished writing to csv after {timedelta(seconds=end-start)}.")
+        print(f"########################")
 
 
 ### EDIT LOG FILE HERE
@@ -159,4 +143,4 @@ log_file = "./log_files/log2.log"
 
 
 if __name__ == "__main__":
-    main(find_user_info(get_ips(log_file), log_file))
+    main()
