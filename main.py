@@ -7,7 +7,6 @@ from csv import writer as csv_writer
 from json import dumps
 
 from log_parser.confirm_file_type import confirm_file_type
-
 from log_parser.read_file import read_file
 
 STATE = "Not Found"
@@ -61,7 +60,7 @@ def find_user_info(filename: str) -> list:
         try:
             response = get(f"https://geolocation-db.com/json/{ip}").json()
         except:
-            raise Exception(f"Could not fetch from https://geolocation-db.com/json/{ip}")
+            raise Exception(f'Data for "{ip}" not found at https://geolocation-db.com/json/{ip} \nExiting program...')
 
         formatted_response = dumps(response, indent=4)
 
