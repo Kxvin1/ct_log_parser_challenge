@@ -63,9 +63,8 @@ def read_file(filename: str) -> dict:
         "url": [],
     }
 
-    with open(filename) as f:
-        lines = f.readlines()
-        for line in lines:
+    with open(filename) as file:
+        for line in file:
             ip = line.split()[0]
             output["ip"].append(ip)
 
