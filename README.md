@@ -14,7 +14,7 @@ git clone https://github.com/Kxvin1/log_parser.git
 
 To install dependencies, run the following command in the root directory
 ```bash
-pip install requests pyyaml ua-parser user-agents
+pip install requests pyyaml ua-parser user-agents pytest
 ```
 
 ### 3. Run the app
