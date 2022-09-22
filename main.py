@@ -6,7 +6,7 @@ from requests import get
 from csv import writer as csv_writer
 from json import dumps
 
-from log_parser.confirm_file_type import confirm_file_type
+from log_parser.file_checker import is_valid_file
 from log_parser.read_file import read_file
 
 STATE = "Not Found"
@@ -37,7 +37,7 @@ def get_log_data(filename: str) -> list:
 
 def find_user_info(filename: str) -> list:
 
-    confirm_file_type(filename)
+    is_valid_file(filename)
     log_data = get_log_data(filename)
 
     user_info_output = []
