@@ -27,7 +27,9 @@ python main.py
 
 ### 4. Check file validity - How to run tests
 
-If you would like to test if your log file is accepted, run the following command in the root directory
+- First, add your file to the "log_files" directory and change the 'log_file' (in main.py) variable to the name of your file
+
+- Then if you would like to test if your log file is accepted, run the following command in the root directory
 
 ```bash
 pytest
