@@ -61,7 +61,7 @@ def find_user_info(filename: str) -> list:
         try:
             response = get(f"https://geolocation-db.com/json/{ip}").json()
         except:
-            raise Exception(f'Data for "{ip}" not found at https://geolocation-db.com/json/{ip} \nExiting program...')
+            raise Exception(f'Error 500: Data for "{ip}" not able to be retrieved at https://geolocation-db.com/json/{ip} \nExiting program...')
 
         formatted_response = dumps(response, indent=4)
 
@@ -90,7 +90,7 @@ def find_user_info(filename: str) -> list:
     print(f"########################\n")
 
     print(f"########################")
-    print(f"Starting dictionary creation...")
+    print(f"Starting list creation...")
     print(f"########################\n")
 
     start = timer()
@@ -99,7 +99,7 @@ def find_user_info(filename: str) -> list:
     end = timer()
 
     print(f"########################")
-    print(f"Finished creating dictionary after {timedelta(seconds=end-start)}.")
+    print(f"Finished creating list after {timedelta(seconds=end-start)}.")
     print(f"########################\n")
 
     return user_info_output
