@@ -11,7 +11,7 @@ from log_parser.read_file import read_file
 
 STATE = "Not Found"
 
-def get_log_data(filename: str) -> list:
+def get_log_data(filename: str) -> dict:
     dict_with_info = read_file(filename)
 
     ip = dict_with_info["ip"]
@@ -22,15 +22,15 @@ def get_log_data(filename: str) -> list:
     get_date_and_time_info = dict_with_info["date_and_time"]
     get_url_info = dict_with_info["url"]
 
-    output = [
-        ua_browser,
-        ua_device,
-        method_info,
-        api_status_info,
-        get_date_and_time_info,
-        get_url_info,
-        ip,
-    ]
+    output = {
+        "browser": ua_browser,
+        "device": ua_device,
+        "method": method_info,
+        "api_status_code": api_status_info,
+        "date_and_time":get_date_and_time_info,
+        "url": get_url_info,
+        "ip": ip,
+    }
 
     return output
 
@@ -48,14 +48,15 @@ def find_user_info(filename: str) -> list:
     print(f"########################\n")
     start = timer()
 
-    for index in range(len(log_data[6])):
-        ip = log_data[6][index]
-        browser = log_data[0][index]
-        device = log_data[1][index]
-        method = log_data[2][index]
-        api_status = log_data[3][index]
-        date_and_time = log_data[4][index]
-        url = log_data[5][index]
+    ips_list = log_data["ip"]
+    for index in range(len(ips_list)):
+        ip = log_data["ip"][index]
+        browser = log_data["browser"][index]
+        device = log_data["device"][index]
+        method = log_data["method"][index]
+        api_status = log_data["api_status_code"][index]
+        date_and_time = log_data["date_and_time"][index]
+        url = log_data["url"][index]
 
         try:
             response = get(f"https://geolocation-db.com/json/{ip}").json()
@@ -66,7 +67,7 @@ def find_user_info(filename: str) -> list:
 
         country_name = response["country_name"]
         STATE = response["state"]
-        print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(log_data[6])}")
+        print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_list)}")
 
         user_info_storage.append(
             (
@@ -81,7 +82,7 @@ def find_user_info(filename: str) -> list:
                 url,
             )
         )
-        print(f"\nAdded to list.\n")
+        print(f"\nAdded to output.\n")
 
     end = timer()
     print(f"########################")
