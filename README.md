@@ -69,3 +69,9 @@ log_file = "./log_files/your-log-file.log"
 
 ##### The same .csv file (in a table)
 ![CSV File](https://i.imgur.com/saeuPNz.png)
+
+----
+
+### Planned Changes/Additions
+
+- Refactor the read_file function to use regex - makes it so the file content order don't matter
