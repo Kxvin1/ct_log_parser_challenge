@@ -74,4 +74,5 @@ log_file = "./log_files/your-log-file.log"
 
 ### Planned Changes/Additions
 
-- Refactor the read_file function to use regex - makes it so the file content order don't matter
+- Refactor the read_file function to use regex - makes it so the file content order don't matter. 
+  - This will also make adding/removing different columns to the csv easier in a situation where the format of the log file is completely different than expected
