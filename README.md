@@ -85,4 +85,3 @@ python main.py
 
 - Refactor the read_file function to use regex - makes it so the file content order don't matter. 
   - This will also make adding/removing different columns to the csv easier in a situation where the format of the log file is completely different than expected
-- Create classes for some of the functions in main.py
