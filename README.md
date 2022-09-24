@@ -1,5 +1,6 @@
-----
-## Access Docker Repo Here: https://hub.docker.com/r/kevinzy/logger_dockerize
+### Run the file without having to install locally just to test it out by accessing the docker repo 
+
+#### Docker Repo Here: https://hub.docker.com/r/kevinzy/logger_dockerize
 ----
 
 ## Instructions for starting project locally
@@ -17,25 +18,23 @@ To install dependencies, run the following command in the root directory
 pip install requests pyyaml ua-parser user-agents pytest
 ```
 
-### 3. Run the app
-
-To run the app, run the following command in the main directory in the CLI:
+Or run the below command if your python alias is 'python' -- to ensure you're installing packages to the correct python version
 
 ```bash
-python main.py
+python -m pip install requests pyyaml ua-parser user-agents pytest
 ```
 
-### 4. Check file validity - How to run tests
+### 3. Check file validity - How to run tests
 
 - First, add your file to the "log_files" directory and change the 'log_file' (in main.py) variable to the name of your file
 
-- Then if you would like to test if your log file is accepted, run the following command in the root directory
+- Then if you would like to test if your log file is accepted and is accepted by the script, run the following command in the root directory
 
 ```bash
 pytest
 ```
 
-### 5. How it works
+### 4. How it works
 
 ```bash
 At the bottom of the `main.py` file, the main function is called with the
@@ -52,11 +51,21 @@ Example below:
 # change this:
 ### EDIT LOG FILE HERE
 log_file = "./log_files/log2.log"
+new_csv = CreateCSV(log_file)
 
 
-# to something like this (after adding your file to "./log_files" directory of the project):
+# to something like this (after adding your file to "./log_files/your-log-name.log" directory of the project):
 ### EDIT LOG FILE HERE
-log_file = "./log_files/your-log-file.log"
+log_file = "./log_files/your-log-name.log"
+new_csv = CreateCSV(log_file)
+```
+
+### 5. Run the script
+
+To run the script, run the following command in the main directory in the CLI:
+
+```bash
+python main.py
 ```
 
 ### 6. Example images of what the csv files look like
