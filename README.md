@@ -1,4 +1,4 @@
-### Run the file without having to install locally just to test it out by accessing the docker repo 
+### Run the file without having to install locally to test it out by accessing the docker repo 
 
 #### Docker Repo Here: https://hub.docker.com/r/kevinzy/logger_dockerize
 ----
