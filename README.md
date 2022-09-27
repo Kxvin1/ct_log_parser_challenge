@@ -26,7 +26,7 @@ python -m pip install requests pyyaml ua-parser user-agents pytest
 
 ### 3. Check file validity - How to run tests
 
-- First, add your file to the "log_files" directory and change the 'log_file' (in main.py) variable to the name of your file
+- First, add your file to the "log_files" directory and change the 'log_file' variables in the 3 test files
 
 - Then if you would like to test if your log file is accepted and is accepted by the script, run the following command in the root directory
 
