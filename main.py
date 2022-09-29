@@ -12,10 +12,10 @@ from log_parser.read_file import read_file
 STATE = "Not Found"
 
 class CreateCSV:
-    def __init__(self, filename):
+    def __init__(self, filename: str) -> None:
         self.filename = filename
 
-    def get_log_data(self) -> dict:
+    def get_log_data(self) -> dict[str, str]:
         dict_with_info = read_file(self.filename)
 
         ip = dict_with_info["ip"]
@@ -39,7 +39,7 @@ class CreateCSV:
         return output
 
 
-    def find_user_info(self) -> list:
+    def find_user_info(self) -> list[str]:
 
         is_valid_file(self.filename)
         log_data = self.get_log_data()
@@ -109,7 +109,7 @@ class CreateCSV:
         return user_info_output
 
 
-    def main(self):
+    def main(self) -> None:
         user_info_list = self.find_user_info()
 
         with open("output.csv", "w") as csvfile:

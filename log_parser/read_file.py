@@ -32,7 +32,7 @@ def extract_useragent(ua_string: str) -> list:
     return useragent_row
 
 
-def get_useragent_info(ua_str: str) -> tuple:
+def get_useragent_info(ua_str: str) -> tuple[str, str, str]:
     user_agent = parse(ua_str)
     browser = user_agent.browser.family
     os = str(user_agent.os.family)
@@ -52,7 +52,7 @@ def get_useragent_info(ua_str: str) -> tuple:
     return browser, device_type, os
 
 
-def read_file(filename: str) -> dict:
+def read_file(filename: str) -> dict[str, list]:
     output = {
         "ip": [],
         "browser": [],

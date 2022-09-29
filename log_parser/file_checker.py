@@ -1,4 +1,4 @@
-def is_valid_file(filename):
+def is_valid_file(filename: str) -> bool:
     if not isinstance(filename, str):
         print("------------------------------------")
         print(f"Filetype of {type(filename)} not accepted.")

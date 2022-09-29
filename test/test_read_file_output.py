@@ -1,7 +1,7 @@
 from ..log_parser.read_file import read_file
 
 
-def test_read_file_output():
+def test_read_file_output() -> bool:
     log_input = {
         "ip": ["207.114.153.6"],
         "browser": ["Chrome"],

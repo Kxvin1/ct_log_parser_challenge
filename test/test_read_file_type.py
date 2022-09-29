@@ -1,4 +1,4 @@
-def test_read_file_type():
+def test_read_file_type() -> bool:
     log_input = "./log_files/log-test.log"
     test_for_str_log_input = {"str": "str input is valid"}
 
