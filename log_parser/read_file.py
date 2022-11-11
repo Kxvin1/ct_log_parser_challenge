@@ -33,10 +33,11 @@ def extract_useragent(ua_string: str) -> list:
 
 
 def get_useragent_info(ua_str: str) -> tuple[str, str, str]:
+    # parse the user agent string
     user_agent = parse(ua_str)
+    # get the browser family
     browser = user_agent.browser.family
-    os = str(user_agent.os.family)
-
+    # get the device type
     device_type = ""
     if user_agent.is_mobile:
         device_type = "Mobile"
@@ -46,12 +47,14 @@ def get_useragent_info(ua_str: str) -> tuple[str, str, str]:
         device_type = "Desktop"
     elif user_agent.is_bot:
         device_type = "Robot"
-
+    # get the operating system
+    os = str(user_agent.os.family)
     device_type = str(device_type)
-
+    # return a tuple of the three values
     return browser, device_type, os
 
 
+# Read the data from the file and store in dictionary
 def read_file(filename: str) -> dict[str, list]:
     output = {
         "ip": [],
@@ -63,30 +66,29 @@ def read_file(filename: str) -> dict[str, list]:
         "url": [],
     }
 
+    # Open the file in read mode
     with open(filename) as file:
+        # Loop through each line in the file
         for line in file:
-            ip = line.split()[0]
-            output["ip"].append(ip)
-
+            # Extract the user agent string from each line
             ua_result = extract_useragent(line)
             ua_string = ua_result[8]
+            # Get the user agent info from the user agent string
             user_agent = get_useragent_info(ua_string)
 
-            user_agent_browser = user_agent[0]
-            output["browser"].append(user_agent_browser)
-
-            user_agent_device = user_agent[1]
-            output["device"].append(user_agent_device)
-
-            method = line.split()[5][1:]
-            output["method"].append(method)
-
-            api_status_code = line.split()[8]
-            output["api_status_code"].append(api_status_code)
-
-            date_and_time = line.split()[3][1:]
-            output["date_and_time"].append(date_and_time)
-
+            # Add the IP to the output dictionary
+            output["ip"].append(line.split()[0])
+            # Add the browser to the output dictionary
+            output["browser"].append(user_agent[0])
+            # Add the device to the output dictionary
+            output["device"].append(user_agent[1])
+            # Add the method to the output dictionary
+            output["method"].append(line.split()[5][1:])
+            # Add the API status code to the output dictionary
+            output["api_status_code"].append(line.split()[8])
+            # Add the date and time to the output dictionary
+            output["date_and_time"].append(line.split()[3][1:])
+            # Add the URL to the output dictionary
             url = line.split()[10][1:-1]
             if url == "-":
                 url = "Empty URL"

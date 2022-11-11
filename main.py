@@ -18,29 +18,20 @@ class CreateCSV:
     def get_log_data(self) -> dict[str, str]:
         dict_with_info = read_file(self.filename)
 
-        ip = dict_with_info["ip"]
-        ua_browser = dict_with_info["browser"]
-        ua_device = dict_with_info["device"]
-        method_info = dict_with_info["method"]
-        api_status_info = dict_with_info["api_status_code"]
-        get_date_and_time_info = dict_with_info["date_and_time"]
-        get_url_info = dict_with_info["url"]
-
         output = {
-            "browser": ua_browser,
-            "device": ua_device,
-            "method": method_info,
-            "api_status_code": api_status_info,
-            "date_and_time":get_date_and_time_info,
-            "url": get_url_info,
-            "ip": ip,
+            "browser": dict_with_info.get("browser", "Not Found"),
+            "device": dict_with_info.get("device", "Not Found"),
+            "method": dict_with_info.get("method", "Not Found"),
+            "api_status_code": dict_with_info.get("api_status_code", "Not Found"),
+            "date_and_time":dict_with_info.get("date_and_time", "Not Found"),
+            "url": dict_with_info.get("url", "Not Found"),
+            "ip": dict_with_info.get("ip", "Not Found"),
         }
 
         return output
 
 
     def find_user_info(self) -> list[str]:
-
         is_valid_file(self.filename)
         log_data = self.get_log_data()
 
@@ -62,16 +53,13 @@ class CreateCSV:
             date_and_time = log_data["date_and_time"][index]
             url = log_data["url"][index]
 
-            try:
-                response = get(f"https://geolocation-db.com/json/{ip}").json()
-            except:
-                raise Exception(f'Error 500: Data for "{ip}" not able to be retrieved at https://geolocation-db.com/json/{ip} \nExiting program...')
+            response = get(f"https://geolocation-db.com/json/{ip}").json()
 
             formatted_response = dumps(response, indent=4)
+            print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_list)}")
 
             country_name = response["country_name"]
             STATE = response["state"]
-            print(f"Fetched Response: \n {formatted_response} \n-- Progress: {index + 1}/{len(ips_list)}")
 
             user_info_storage.append(
                 (
@@ -86,7 +74,6 @@ class CreateCSV:
                     url,
                 )
             )
-            print(f"\nAdded to output.\n")
 
         end = timer()
         print(f"########################")
